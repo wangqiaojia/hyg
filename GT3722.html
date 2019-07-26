@@ -1,0 +1,496 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="author" content="醒客商城">
+<meta name="keywords" content="">
+
+<title>贝尔金 新版笔记本电脑散热底座F5L041qe - 醒客商城</title>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/hd.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript"> 
+$(function(){
+  //$("img").lazyload({placeholder : "images/grey.gif"});
+});
+</script>
+</head>
+<body>
+<div class="header">
+<div class="topbody1">
+<div class="topDiv1">
+<div class="topDiv1_right">
+<ul>
+<!--加载登录状态-->
+<script type="text/javascript" src="js/header_src_login.js"></script>
+</ul>
+</div>
+</div><!--topDiv1 end-->
+</div><!--topbody1 end-->
+
+<div class="topbody2" style=" position:relative;height:150px;">
+<div class="topbody2_div1"> 
+<div class="logo flt"><h1><a href="/"><img src="picture/logo.jpg" title="醒客商城-真醒客 多聚惠"></a></h1></div><!--logo end-->
+<div class="sousuo flt">
+
+<form name="formsh" action="tks_search.php" method="get">
+<div class="sousuo_form">
+<input type="text" class="input_01 flt" name="keyword" maxlength="50" value="商品搜索" autocomplete="off" onblur="if(this.value==''){this.value='商品搜索';}" onfocus="if(this.value=='商品搜索'){this.value='';}">
+<a href="javascript:gosh()" class="input_02 flt"> </a>
+<!--<input type="submit" value="" class="input_02 flt">-->
+<div class="cli"></div>
+</div>
+</form>
+</div><!--sousuo end-->
+
+<div class="top_nav flt">
+<a href="/brand_main.html" class="a2" onmouseover="HD_dh(2)" id="HDtag2">品牌专区</a>
+<a href="/" class="a1" onmouseover="HD_dh(1)" id="HDtag1" style="background:url(images/new_daabj.jpg) no-repeat;color:#ea2222;">商品分类</a>
+<br style="clear:both" />
+</div><!--top_nav end-->
+
+<div class="cli"></div> 
+</div>
+<!--topbody2_div1 end-->
+<!--加载分类状态-->
+<script type="text/javascript" src="js/header_src_catalog.js"></script>
+</div><!--topbody2 end-->
+</div>
+<script type="text/javascript">
+Mu_addLoadEvent(Mu_onload);
+</script>
+<!--头部模板结束-->
+
+
+<!--商品介绍页-->
+<script src="js/jquery.jqzoom.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+<script src="js/prod_browse.js"></script>
+
+<script type="text/javascript">
+function fav_chk(productcode)
+{
+	//监测商品关注状态
+	var par1=productcode;
+	$.ajax({
+		url: '/js/chkfav.php?enforce=chk&r='+Math.random(),
+		data: {productcode:par1},
+		type: 'GET',
+		timeout: 10000,
+		error: function () 
+		{
+			//alert('操作失败！');
+		},
+		success: function (data) 
+		{
+			eval('myR=' + data);
+			fav_upsta(productcode,myR['retid']);
+		}
+	});
+	return true;
+}
+
+function fav_upsta(productcode,fsta)
+{
+	//改变关注按状态
+	var afav=document.getElementById('afav');
+	var fstr='',tit='',enforce='';
+	if (fsta==1)
+	{
+		fstr='已关注';
+		tit='点击取消关注';
+		enforce='unfav';
+	}
+	else
+	{
+		fstr='关注';
+		tit='点击关注';
+		enforce='fav';
+	}
+	afav.innerHTML=fstr;
+	afav.title=tit;
+	afav.href='/js/chkfav.php?productcode='+productcode+'&enforce='+enforce;
+}
+
+function pi_numUP(enforce)
+{
+	//更新购买数量
+	var num_obj=document.getElementById('bnum');
+	if (!isInt(num_obj.value)){num_obj.value=1;} 	//纠正数量
+	var ori_num=Number(num_obj.value);				//原商品数量
+	
+	//生成新商品数量
+	if (!ori_num || ori_num<=0){new_num=1;}
+	else{new_num=ori_num;}
+	
+	if (enforce=='remove'){new_num--;}
+	else if (enforce=='add'){new_num++;}
+	else{new_num=ori_num;}
+	if (new_num<=0){new_num=1;}
+	
+	num_obj.value=new_num;
+}
+
+function pi_numSUB(tobj,pcode)
+{
+	//提交购买
+	var bnum=document.getElementById('bnum').value;
+	var burl="tks_buy.php?addcode="+pcode+"&addnum="+bnum;
+	tobj.href=burl;
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/list.css">
+
+<!--导航-->
+<div class="navtop">
+<span class='er_bt'><a href=cata/thCata_102.html>配件</a></span><a class='er_sbt' href=cata/thCata_102_9.html>&nbsp;&gt;&nbsp;电脑配件</a><a class='er_sbt' href=cata/thCata_102_9_39.html>&nbsp;&gt;&nbsp;散热器</a></div>
+<!--导航结束-->
+
+<!--pr_preview_body start-->
+<div class="pr_preview_body">
+
+<!--商品图片放大效果 start-->
+<div class="pr_preview_left">
+ <div class="lanrenzhijia">
+<!-- 大begin -->
+<div id="preview" class="spec-preview" > 
+<span class='jqzoom'><img jqimg='/zm_watermark.php?pvalue=pO%2FUbuLd1Ip%2BaS%2BxfvmrHw%3D%3D' src='picture/00.jpg' width='200' height='200'></span></div>
+<!-- 大图end -->
+<!-- 缩略图begin -->
+<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+<div class="items">
+<ul>
+<li><img bimg='/zm_watermark.php?pvalue=pO%2FUbuLd1Ip%2BaS%2BxfvmrHw%3D%3D' src='picture/00.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=pO%2FUbuLd1Ip3meovR3phQg%3D%3D' src='picture/01.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=pO%2FUbuLd1IqzCXDQdFe0YQ%3D%3D' src='picture/02.jpg' onmousemove='preview(this)'></li></ul>
+</div>
+</div>
+<!-- 缩略图end -->
+</div>
+</div><!--商品图片放大效果 end-->
+
+
+
+<div class="pr_preview_right">
+<div class="pr_name">贝尔金 新版笔记本电脑散热底座F5L041qe</div>
+<div class="pr_jiage1 prmar_20"><span class="span1">市场价格：</span><span class="span2"><b>￥279.00</b></span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">醒客价格：</span><span class="span2">￥99.00</span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">人气指数：</span><span class="span2" style="color:#b8b8b8;font-size:12px;">127</span><br style="clear:both" /></div>
+
+<div class="pr_jiage3 prmar_20"><span class="span1">醒客编号：</span><span class="span2">GT3722</span> <br style="clear:both" /></div>
+<div class="pr_jiage4 prmar_20"><span class="span1" style=" display:block; float:left;">厂商编号：</span><span class="span2" style=" display:block; float:left;width:317px;margin:0px;">F5L041qe</span><span class="span3">厂商：</span><span class="span4"><a href='brand.php?brandid=2&pma_code=102&cat_code=9'>贝尔金</a></span><br style="clear:both" /></div>
+<!--  <div class="prwiew_no_div"><span class="span1">购买数量：</span> <span class="span2"><a href="#" class="Remove"></a><input type="text" value="1"/><a href="#" class="Plus"></a><br style="clear:both" /></span><br style="clear:both" /></div>-->
+<div class="prwiew_btn_div"><!--购买数量 start-->
+	<div class="amount_body">
+	<a class="btn-reduce" href="javascript:void(0)" onclick="pi_numUP('remove')">-</a>
+	<a class="btn-add" href="javascript:void(0)" onclick="pi_numUP('add')">+</a>
+	<input class="text" id="bnum" name="bnum" value="1" onBlur="pi_numUP('')">
+	</div>
+	<!--购买数量 end-->
+	<a href='tks_buy.php?addcode=GT3722' onclick="pi_numSUB(this,'GT3722')" target='_blank' class='buy_btn'>加入购物车</a> <a href="#" target="btm_ifr" class="guangzhu_btn" id="afav">关注</a><br style="clear:both;"></div>
+</div><!--pr_preview_right end-->
+<br style="clear:both" />
+</div>
+<!--pr_preview_body end-->
+
+<div class="pr_tuwenbody">
+<div class="pr_tuwen_left flt">
+<div class="er_main_l_new" style="margin:0px;">
+<div class="emln">相关推荐</div>
+<div class='emln_p_i'>
+	<a href=prods/HP/HP0261.html target='_blank'><img src='picture/hp0261.jpg' title='惠普（HP）扩展坞站锁 电缆锁 AU656AA ' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/HP/HP0261.html title='惠普（HP）扩展坞站锁 电缆锁 AU656AA ' target='_blank'>惠普（HP）扩展坞站锁 电缆锁 AU656AA </a>
+	<span>￥220.00</span>
+	</div><div class='emln_p_i'>
+	<a href=prods/OP/OP0320.html target='_blank'><img src='picture/op0320.jpg' title='ThinkPad OneLink 桌面扩展坞（磨砂黑） 4X10A06125' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/OP/OP0320.html title='ThinkPad OneLink 桌面扩展坞（磨砂黑） 4X10A06125' target='_blank'>ThinkPad OneLink 桌面扩展坞（磨砂黑） 4X10A06125</a>
+	<span>￥695.00</span>
+	</div></div>
+
+<div class="er_main_l_new">
+<div class="emln">同类排行</div>
+<div class="emln_p">
+<dl>
+<dd style='background:url(images/ph_01.png) no-repeat;'>
+		<a style='float:left;' href=prods/GT/GT2774.html target='_blank'><img src='picture/gt2774.jpg' title='泰格斯 可伸缩旅行线锁 ASP01AP-50' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/GT/GT2774.html title='泰格斯 可伸缩旅行线锁 ASP01AP-50' target='_blank'>泰格斯 可伸缩旅行线锁 ASP01AP-50..</a>
+		<span style='font-size:16px; color:#d50401;'>￥90.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_02.png) no-repeat;'>
+		<a style='float:left;' href=prods/GT/GT3722.html target='_blank'><img src='picture/gt3722.jpg' title='贝尔金 新版笔记本电脑散热底座F5L041qe' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/GT/GT3722.html title='贝尔金 新版笔记本电脑散热底座F5L041qe' target='_blank'>贝尔金 新版笔记本电脑散热底座F5L041q..</a>
+		<span style='font-size:16px; color:#d50401;'>￥99.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_03.png) no-repeat;'>
+		<a style='float:left;' href=prods/BR/BR0735.html target='_blank'><img src='picture/br0735.jpg' title='贝尔金 高速USB300M无线网络适配器 F7D2101ZH' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/BR/BR0735.html title='贝尔金 高速USB300M无线网络适配器 F7D2101ZH' target='_blank'>贝尔金 高速USB300M无线网络适配器 F..</a>
+		<span style='font-size:16px; color:#d50401;'>￥114.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_04.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GF/GF0110.html title='宜丽客 南极枕 (B5) SX-B502' target='_blank'>宜丽客 南极枕 (B5) SX-B502..</a>
+		<b>￥79.00</b>
+		</dd><dd style='background:url(images/ph_05.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0935.html title='Intel PRO/无线 3945ABG 迷你 PCI Express 适配器' target='_blank'>Intel PRO/无线 3945ABG 迷..</a>
+		<b>￥370.00</b>
+		</dd><dd style='background:url(images/ph_06.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0970.html title='ThinkPad 256MB PC-5300 DDR2 内存 40Y7732' target='_blank'>ThinkPad 256MB PC-5300..</a>
+		<b>￥380.00</b>
+		</dd><dd style='background:url(images/ph_07.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT1083.html title='贝尔金 PCI Express 2口SATA II RAID接口卡(1内+1外) F5U197' target='_blank'>贝尔金 PCI Express 2口SATA..</a>
+		<b>￥590.00</b>
+		</dd><dd style='background:url(images/ph_08.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT1084.html title='贝尔金 SATA II RAID两口PCI Express接口卡(2内) F5U251' target='_blank'>贝尔金 SATA II RAID两口PCI ..</a>
+		<b>￥590.00</b>
+		</dd><dd style='background:url(images/ph_09.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT1125.html title='ThinkPad 256MB PC2-4200 DDR2 内存 73P3840' target='_blank'>ThinkPad 256MB PC2-420..</a>
+		<b>￥380.00</b>
+		</dd><dd style='background:url(images/ph_10.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT2146.html title='罗技 快看灵讯版（蓝）' target='_blank'>罗技 快看灵讯版（蓝）</a>
+		<b>￥134.00</b>
+		</dd></dl>
+</div>
+</div>
+</div><!--pr_tuwen_left end-->
+<div class="pr_tuwen_right flt">
+<div class="pr_tuwen_titile">
+<a id="wai0" style="background:#afafaf;color:#fff;" href="javascript:void(0)" onclick="javascript:Menum('0');">详细介绍</a><a id="wai1" href="javascript:void(0)" onclick="javascript:Menum('1');">文字介绍</a><a id="wai2" href="javascript:void(0)" onclick="javascript:Menum('2');">商品规格</a><a id="wai3" href="javascript:void(0)" onclick="javascript:Menum('3');">相关参数</a><a id="wai4" href="javascript:void(0)" onclick="javascript:Menum('4');">适用范围</a><a id="wai5" href="javascript:void(0)" onclick="javascript:Menum('5');">包装规格</a><a id="wai6" href="javascript:void(0)" onclick="javascript:Menum('6');">包装清单</a></div>
+<div class="pr_tuwen_img" id="conm0" style=" text-align:center;padding-top:10px;">
+<iframe src="introHtml/GT3722/index.html" name="productinfo" id="productinfo" width="770" height="500" marginwidth="0" marginheight="0" scrolling="No" frameborder="0" border="0"></iframe><br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+<!--文字介绍-->
+	<div class="pr_tuwen_img" id="conm1" style="display:none;">
+	<div style='text-align:left;padding:10px'>舒适使用的同时保持笔记本电脑凉爽 <br />
+<br />
+材质柔软但仍可提供良好支撑<br />
+享受舒适的散热底座，配备内置风扇和专利波浪设计, 提高空气循环和散热能力。 无论在沙发上、床上还是其他喜爱的休息地点，都可以轻松使用。   <br />
+<br />
+凉爽舒适<br />
+独特的 Airflow 设计通过通风架将凉爽空气平稳送入，并将热空气从您的笔记本电脑中排出。 风扇同时直接将空气导向热源。 而且，散热底座的高度可以调节，您可以找到最适合设备的角度。<br />
+<br />
+■配备衬垫，提高膝盖舒适度<br />
+■利用 Airflow 设计输入凉爽空气，排出热空气<br />
+■风扇直接将空气导向热源<br />
+■可调节高度<br />
+■通过 USB 端口供电<br />
+■一年保修</div>
+    
+    <br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+    
+	</div>
+<!--商品规格-->
+<div class="pr_tuwen_img" id="conm2" style="display:none;">
+<div style='text-align:left;padding:10px'>392*342*62MM </div>
+
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+<!--相关参数-->
+<div class="pr_tuwen_img" id="conm3" style="display:none;">
+<div style='text-align:left;padding:10px'>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr height='22'>
+	<td width="11%">商品产地：</td>
+	<td width="89%">台湾</td>
+	</tr><tr height='22'>
+	<td width="11%">商品重量：</td>
+	<td width="89%">1 (千克)</td>
+	</tr>
+</table>
+</div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+
+<!--适用范围-->
+<div class="pr_tuwen_img" id="conm4" style="display:none;">
+<div style='text-align:left;padding:10px'>使用15寸(含)以下笔记本电脑 </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装规格-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'>395*345*65MM </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装清单-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'>散热底座，USB线 </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+
+
+<!--商品咨询-->
+<div class="pr_zixun" style="width:948px;height:auto;padding:20px;">
+<iframe width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" src="appifr.php?productcode=GT3722" id="appifr" name="appifr" style="height: 410px;"></iframe>
+</div>
+
+</div><!--pr_tuwen_right end-->
+<br style="clear:both" />
+
+
+
+</div><!--pr_tuwenbody end-->
+
+<script type="text/javascript">
+function GetObj(objName)
+{
+	if(document.getElementById)
+	{
+		return eval('document.getElementById("' + objName + '")');
+	}
+	else if(document.layers)
+	{
+		return eval("document.layers['" + objName +"']");
+	}
+	else
+	{
+		return eval('document.all.' + objName);
+	}
+}
+function Menum(index,flag)
+{
+	for(var i=0;i<10;i++)
+	{
+		if(GetObj("conm"+i) && GetObj("wai"+i))
+		{
+			GetObj("conm"+i).style.display = 'none';
+			//GetObj("wai"+i).className = "pag_off";
+			
+			GetObj("wai"+i).style.background="images/a419b6d976214176a9af8d093ff9da50.gif";
+			GetObj("wai"+i).style.color="#4f4f4f";
+		}
+	}
+	if(GetObj("conm"+index) && GetObj("wai"+index))
+	{
+		GetObj("conm"+index).style.display = 'block';
+		//GetObj("wai"+index).className = "pag_on";
+		GetObj("wai"+index).style.background="#afafaf";
+		GetObj("wai"+index).style.color="#fff";
+	}
+}
+
+fav_chk('GT3722');
+</script>
+
+
+<!--底部模板开始-->
+<style type="text/css">
+.yilou_bottom{height:40px;}
+.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
+.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
+.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
+.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
+.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+
+.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
+.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+
+.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
+.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+
+.bottom_main2{width:1200px; margin:0px auto;}
+.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
+.bottom_main2 .links a{margin:0px 10px;} 
+.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+</style>
+
+<!--加载公共底部信息-->
+<script type="text/javascript" src="js/bottom_src.js"></script>
+
+</body>
+</html>
+<!-- html 2016-01-14 09:34:44 -->

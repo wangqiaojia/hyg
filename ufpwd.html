@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="author" content="醒客商城">
+<meta name="keywords" content="">
+
+<title>醒客商城 - 找回密码</title>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript"> 
+$(function(){
+  $("img").lazyload({placeholder : "images/grey.gif"});
+});
+</script>
+</head>
+<body>
+<div class="header">
+<div class="topbody1">
+<div class="topDiv1">
+<div class="topDiv1_right">
+<ul>
+<!--加载登录状态-->
+<script type="text/javascript" src="js/header_src_login.js"></script>
+</ul>
+</div>
+</div><!--topDiv1 end-->
+</div><!--topbody1 end-->
+</div>
+<!--头部模板结束-->
+<!--忘记密码第1步-->
+<link rel="stylesheet" type="text/css" href="css/login.css">
+
+
+<script type="text/javascript">
+var LANG_DEF = new Array();
+LANG_DEF['prom1']="";
+LANG_DEF['prom2']="";
+
+function lsubmit()
+{
+	var theForm=document.form1; 
+	if (theForm.cardnumber.value=="")
+	{
+		document.getElementById('prom1').innerHTML='请输入用户名或邮箱地址';
+		theForm.cardnumber.focus();
+		return (false);
+	}
+	if (theForm.thcode.value == "")
+	{
+		document.getElementById('prom2').innerHTML='请输入验证码';
+		theForm.thcode.focus();
+		return (false);
+	}
+	theForm.submit();
+	return true;
+}
+
+function frset()
+{
+	document.form1.reset();
+}
+
+function resetprom(pid)
+{
+	eval("sp=document.getElementById('"+pid+"')");
+	sp.innerHTML=LANG_DEF[pid];
+}
+
+function passprom(pid)
+{
+	eval("sp=document.getElementById('"+pid+"')");
+	sp.innerHTML="<img src='picture/lv_ok.gif' style='position:relative;top:6px'>";
+}
+
+function clsprompt(sid)
+{
+	eval("sp=document.getElementById('"+sid+"')");
+	sp.innerHTML='';
+}
+
+function subprom(istr)
+{
+	if (istr==''){istr='用户名不正确';}
+	document.getElementById('prom1').innerHTML=istr;
+	document.getElementById('prom2').innerHTML='';
+	loadimage();
+}
+function thcodeprom()
+{
+	document.getElementById('prom2').innerHTML='验证码错误，请重试';
+	document.getElementById('prom1').innerHTML='';
+	loadimage();
+}
+
+function loadimage()
+{
+	var obj=document.getElementById("thcodeimg");
+	obj.src = "thcode2.php?"+Math.random();
+}
+
+</script>
+
+<form method="POST" action="ufpwd.php?bu=1" name="form1" target="btm_ifr">
+<div class="reg_body">
+<div class="reg_logo"><h1><a href="/" target="_blank"><img src="picture/logo.jpg"></a></h1></div>
+ 
+<div class="reg_main">
+<div class="reg_title"><span class="span1">找回密码</span></div>
+ 
+<!--步骤图-->
+<p style=" text-align:center; padding:25px 0px;"><img src="picture/pwez_1.jpg"></p>
+<!--步骤图-->
+ 
+<div class="reg_center">
+ 
+<div class="wj_reg_input_body">
+<span class="span_1" style="width:152px;">用户名或邮箱：</span> 
+<span class="span_2"><input type="text" name="cardnumber" id="cardnumber" maxlength="50" class="regipt_def reginpu_hover" onBlur="clsprompt('prom1')"/></span> 
+<span class="span_3" id="prom1" style="color:#e0321c;"><img src="picture/lv_ok.gif" style="position:relative;top:5px;display:none"></span>
+ 
+<br style="clear:both;" /></div>
+ 
+             
+<div class="wj_reg_input_body">
+<span class="span_1" style="width:152px;">验证码：</span> 
+<span class="span_2_03"><input type="text" name="thcode" id="thcode" maxlength="4" autocomplete="off" onBlur="clsprompt('prom2')" class="regipt_thcode reginpu_hover"></span>  
+<img src="picture/thcode2.php" style="display:block; float:left;margin-top:6px;margin-bottom:0px;cursor:pointer;" id="thcodeimg" onclick="loadimage()" title="点击更换">
+	<span id="prom2" style="float:left;margin-top:10px;margin-left:12px;color:#e0321c;"></span>
+ 
+<br style="clear:both;" /></div>
+ 
+<div id="reg_btn_on" style="padding-left:165px;"><a href="javascript:void(0)" onclick="lsubmit()">下一步</a></div>            
+ 
+</div><!--reg_center end-->
+</div><!--reg_main end--> 
+</div>
+</form>
+ 
+
+<!--底部模板开始-->
+<style type="text/css">
+.yilou_bottom{height:40px;}
+.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
+.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
+.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
+.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
+.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+
+.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
+.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+
+.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
+.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+
+.bottom_main2{width:1200px; margin:0px auto;}
+.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
+.bottom_main2 .links a{margin:0px 10px;} 
+.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+</style>
+
+<!--加载公共底部信息-->
+<script type="text/javascript" src="js/bottom_src.js"></script>
+
+</body>
+</html>

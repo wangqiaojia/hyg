@@ -1,0 +1,107 @@
+/***全局样式设置***/
+html, body, div, p, span, label, img, a, ol, ul, dl, dt, dd, li, table, tr, td, th, tbody, thead, tfoot, form, fieldset, legent, h1, h2, h3, h4, h5, h6, strong, b, em, blockquote, cite, pre, code, hr, br, input, button, textarea { padding:0px; margin:0px; }
+body1{font:14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif; color:#242424;}
+body{font-family:"Microsoft YaHei";font-size:14px; color:#646464;}
+a{text-decoration:none;color:#4f4f4f;blr:expression(this.onFocus=this.blur());}
+a{-webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+*{outline:none;}
+img{border-width:0px;border:none;}
+a:hover{color:#ea2222;}
+ul,dl,dt,dd,p,h1,h2{margin:0px;padding:0px;}
+#no_border{border:none;}
+li{list-style-type:none;}
+input, button { cursor:pointer; outline:0 none; font-family:"Microsoft YaHei"; }
+input[type="text"] { cursor:text !important; }
+.outline{ blr:expression_r(this.onFocus=this.blur()) }
+:focus { outline:0 none; }
+.flt{ float:left;}
+.rlt{ float:right;}
+.cli{ clear:both;}
+.red{color:#e0321c;}
+.blue{color:#0771bb;}
+.black{color:#242424;}
+.mar_30{margin-top:30px;}
+.no_bg{background:none;}
+.mar10{margin-top:10px;}
+a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+
+
+/******/
+
+#nav_fuceng_body{width:700px;height:366px;}
+#nav_fuceng_body .nav_fuceng_left{width:468px;height:366px; float: left;border-right:1px solid #dcdcdc;padding:0px 10px;font-size:13px; position:relative;}
+#nav_fuceng_body .nav_fuceng_left dl{ overflow:hidden;padding:6px 0;border-bottom:1px dashed #dcdcdc;}
+#nav_fuceng_body .nav_fuceng_left dl dt{ width:90px;float:left;line-height:22px; text-align:right;padding:3px 6px 0 0;}
+#nav_fuceng_body .nav_fuceng_left dl dd{ width:367px;padding:3px 0 0; float:left;}
+#nav_fuceng_body .nav_fuceng_left dl dd em{border-left:1px solid #ccc; float:left;height:14px;line-height:14px;margin:4px 0;padding:0px 8px; font-style:normal;}
+#nav_fuceng_body .nav_fuceng_right{width:183px;height:366px; float:left;padding:0px 10px;}
+#nav_fuceng_body .nav_fuceng_right .pptj_title{height:38px;line-height:38px;padding-left:10px;border-bottom:1px dashed #dcdcdc;}
+#nav_fuceng_body .nav_fuceng_right ol{padding-top:5px;font-size:12px;}
+#nav_fuceng_body .nav_fuceng_right ol li{ display:block;width:80px;height:24px;line-height:20px; float:left;padding-left:10px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_main_right_title{height:22px;padding:0 6px 5px 8px; border-bottom:1px dashed #dcdcdc;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_main_right_title span{ height:22px;display:block;line-height:21x;margin-left:6px;margin-top:15px;padding-left:27px;background:url(../images/hot.gif) no-repeat left center;}	
+
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv {height:177px;line-height:21px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li{ display:block;height:66px;padding:8px 0 8px 0;width:190px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangNo{width:20px;height:66px; float:left;background:#e21617;font-size:16px;color:#fff; text-align:center;padding-top:7px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangNo_02{width:20px;height:66px; float:left;background:#f0922e;font-size:16px;color:#fff; text-align:center;padding-top:7px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangImg{width:63px;height:60px; float:left; text-align:center;padding-top:10px;padding-bottom:10px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangImg a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangName{width:100px;height:70px; float:left; overflow:hidden;padding-top:10px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangName span{ display:block;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangName .span1{color:#ea2222;margin-bottom:2px;}
+#nav_fuceng_body .nav_fuceng_right .fuceng1_prmdiv  ol li .paihangName .span2{font-size:12px;line-height:18px; overflow:hidden;height:38px; overflow:hidden}
+
+
+
+.mny{
+position:relative;margin-right:30px; text-align: right; padding-right: 0px; padding-top: 20px;
+}
+.mny1{
+position:relative;float:right;right:3px;
+}
+.mny2{
+position:relative;float:right;right:10px;
+}
+
+.sl{
+font-size: 12px;
+font-family: Tahoma, Helvetica, sans-serif; height: 18px;
+}
+.rd{ color:#ff0000;}
+.style2 {
+color: #ED6B42;
+font-weight: bold;
+}
+.price { color:#cc0000; font-weight: bold;}
+.small{ color:#999; font-size: 0.85em; font-weight: normal;}
+.pricetotal { color:#cc0000; font-weight: bold; font-size: 16px;}
+html body table tr .spmc span{ font-size: 14px; color:#0066cc; font-weight: bold;}
+.spmc a:link{ font-size: 12px; color:#0066cc; font-weight: bold; text-decoration: none;}
+.spmc a:visited{ font-size: 12px; color:#0066cc; font-weight: bold; text-decoration: none;}
+.spmc a:hover{ font-size: 12px;  font-weight: bold; text-decoration: underline;}
+.loginbox{ border:1px solid #d3d2da; background-color:#FFFFFF;}
+.loginbox1{ border:1px solid #ddd;}
+.pd10 { padding: 15px;}
+
+.l2{ padding-left: 2px;}
+.l5{ padding-left: 5px;}
+.l10{ padding-left: 10px;}
+
+.input{height:27px;line-height:27px;padding-left:5px;padding-right:10px;border:1px solid #dcdcdc;font-size:13px;}
+.sl{height:27px; border:1px solid #dcdcdc; font-family:"Microsoft YaHei";font-size:13px;}
+.th:link{font-size:13px;}
+
+/*
+品牌专区导航用样式2016-01-15 by wangzhong
+*/
+.page{ margin:0 auto; position:relative; width:1200px;}
+.page .fubrand_body{width:358px;height:auto; position:absolute; top:25px;left:510px; z-index:10;}
+.page .fubrand_body .fubrand_top{width:358px;height:26px;background:url(../images/bsc_maintop.png) no-repeat;}
+.page .fubrand_body .fubrand_center{width:358px;height:auto;min-height:20px;background:url(../images/bsc_maincenter.png) repeat-y;padding-top:15px;padding-bottom:30px;}
+.page .fubrand_body .fubrand_center ul{padding-left:34px;padding-right:34px;}
+.page .fubrand_body .fubrand_center ul li{ float:left;padding-right:20px;line-height:23px;}
+.page .fubrand_body .fubrand_center ul li a{font-size:13px;color:#2d2d2d; text-decoration:none;font-weight:bold;}
+.page .fubrand_body .fubrand_center ul li a:hover{color:#ea2222;}
+.page .fubrand_body .fubrand_bottom{width:358px;height:26px;background:url(../images/bsc_mainbottom.png) no-repeat;}

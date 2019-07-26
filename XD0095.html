@@ -1,0 +1,464 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="author" content="醒客商城">
+<meta name="keywords" content="">
+
+<title>现代（HYUNDAI）无线智能蓝牙运动耳机 红色 YH-B003 - 醒客商城</title>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/hd.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript"> 
+$(function(){
+  //$("img").lazyload({placeholder : "images/grey.gif"});
+});
+</script>
+</head>
+<body>
+<div class="header">
+<div class="topbody1">
+<div class="topDiv1">
+<div class="topDiv1_right">
+<ul>
+<!--加载登录状态-->
+<script type="text/javascript" src="js/header_src_login.js"></script>
+</ul>
+</div>
+</div><!--topDiv1 end-->
+</div><!--topbody1 end-->
+
+<div class="topbody2" style=" position:relative;height:150px;">
+<div class="topbody2_div1"> 
+<div class="logo flt"><h1><a href="/"><img src="picture/logo.jpg" title="醒客商城-真醒客 多聚惠"></a></h1></div><!--logo end-->
+<div class="sousuo flt">
+
+<form name="formsh" action="tks_search.php" method="get">
+<div class="sousuo_form">
+<input type="text" class="input_01 flt" name="keyword" maxlength="50" value="商品搜索" autocomplete="off" onblur="if(this.value==''){this.value='商品搜索';}" onfocus="if(this.value=='商品搜索'){this.value='';}">
+<a href="javascript:gosh()" class="input_02 flt"> </a>
+<!--<input type="submit" value="" class="input_02 flt">-->
+<div class="cli"></div>
+</div>
+</form>
+</div><!--sousuo end-->
+
+<div class="top_nav flt">
+<a href="/brand_main.html" class="a2" onmouseover="HD_dh(2)" id="HDtag2">品牌专区</a>
+<a href="/" class="a1" onmouseover="HD_dh(1)" id="HDtag1" style="background:url(images/new_daabj.jpg) no-repeat;color:#ea2222;">商品分类</a>
+<br style="clear:both" />
+</div><!--top_nav end-->
+
+<div class="cli"></div> 
+</div>
+<!--topbody2_div1 end-->
+<!--加载分类状态-->
+<script type="text/javascript" src="js/header_src_catalog.js"></script>
+</div><!--topbody2 end-->
+</div>
+<script type="text/javascript">
+Mu_addLoadEvent(Mu_onload);
+</script>
+<!--头部模板结束-->
+
+
+<!--商品介绍页-->
+<script src="js/jquery.jqzoom.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+<script src="js/prod_browse.js"></script>
+
+<script type="text/javascript">
+function fav_chk(productcode)
+{
+	//监测商品关注状态
+	var par1=productcode;
+	$.ajax({
+		url: '/js/chkfav.php?enforce=chk&r='+Math.random(),
+		data: {productcode:par1},
+		type: 'GET',
+		timeout: 10000,
+		error: function () 
+		{
+			//alert('操作失败！');
+		},
+		success: function (data) 
+		{
+			eval('myR=' + data);
+			fav_upsta(productcode,myR['retid']);
+		}
+	});
+	return true;
+}
+
+function fav_upsta(productcode,fsta)
+{
+	//改变关注按状态
+	var afav=document.getElementById('afav');
+	var fstr='',tit='',enforce='';
+	if (fsta==1)
+	{
+		fstr='已关注';
+		tit='点击取消关注';
+		enforce='unfav';
+	}
+	else
+	{
+		fstr='关注';
+		tit='点击关注';
+		enforce='fav';
+	}
+	afav.innerHTML=fstr;
+	afav.title=tit;
+	afav.href='/js/chkfav.php?productcode='+productcode+'&enforce='+enforce;
+}
+
+function pi_numUP(enforce)
+{
+	//更新购买数量
+	var num_obj=document.getElementById('bnum');
+	if (!isInt(num_obj.value)){num_obj.value=1;} 	//纠正数量
+	var ori_num=Number(num_obj.value);				//原商品数量
+	
+	//生成新商品数量
+	if (!ori_num || ori_num<=0){new_num=1;}
+	else{new_num=ori_num;}
+	
+	if (enforce=='remove'){new_num--;}
+	else if (enforce=='add'){new_num++;}
+	else{new_num=ori_num;}
+	if (new_num<=0){new_num=1;}
+	
+	num_obj.value=new_num;
+}
+
+function pi_numSUB(tobj,pcode)
+{
+	//提交购买
+	var bnum=document.getElementById('bnum').value;
+	var burl="tks_buy.php?addcode="+pcode+"&addnum="+bnum;
+	tobj.href=burl;
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/list.css">
+
+<!--导航-->
+<div class="navtop">
+<span class='er_bt'><a href=cata/thCata_103.html>手机数码</a></span><a class='er_sbt' href=cata/thCata_103_23.html>&nbsp;&gt;&nbsp;耳机/麦克风</a><a class='er_sbt' href=cata/thCata_103_23_122.html>&nbsp;&gt;&nbsp;耳机</a></div>
+<!--导航结束-->
+
+<!--pr_preview_body start-->
+<div class="pr_preview_body">
+
+<!--商品图片放大效果 start-->
+<div class="pr_preview_left">
+ <div class="lanrenzhijia">
+<!-- 大begin -->
+<div id="preview" class="spec-preview" > 
+<span class='jqzoom'><img jqimg='/zm_watermark.php?pvalue=TarALWTht%2F%2BaqVYkwVjz6g%3D%3D' src='picture/01.jpg' width='200' height='200'></span></div>
+<!-- 大图end -->
+<!-- 缩略图begin -->
+<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+<div class="items">
+<ul>
+<li><img bimg='/zm_watermark.php?pvalue=TarALWTht%2F%2BaqVYkwVjz6g%3D%3D' src='picture/01.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=TarALWTht%2F9oUBkVn1f1Ug%3D%3D' src='picture/02.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=TarALWTht%2F9YFO00Mrh5Og%3D%3D' src='picture/03.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=TarALWTht%2F9ZVOAMCyR9fQ%3D%3D' src='picture/04.jpg' onmousemove='preview(this)'></li></ul>
+</div>
+</div>
+<!-- 缩略图end -->
+</div>
+</div><!--商品图片放大效果 end-->
+
+
+
+<div class="pr_preview_right">
+<div class="pr_name">现代（HYUNDAI）无线智能蓝牙运动耳机 红色 YH-B003</div>
+<div class="pr_jiage1 prmar_20"><span class="span1">市场价格：</span><span class="span2"><b>￥136.00</b></span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">醒客价格：</span><span class="span2">￥129.00</span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">人气指数：</span><span class="span2" style="color:#b8b8b8;font-size:12px;">0</span><br style="clear:both" /></div>
+
+<div class="pr_jiage3 prmar_20"><span class="span1">醒客编号：</span><span class="span2">XD0095</span> <br style="clear:both" /></div>
+<div class="pr_jiage4 prmar_20"><span class="span1" style=" display:block; float:left;">厂商编号：</span><span class="span2" style=" display:block; float:left;width:317px;margin:0px;">YH-B003</span><span class="span3">厂商：</span><span class="span4">韩国现代（HYUNDAI）</span><br style="clear:both" /></div>
+<!--  <div class="prwiew_no_div"><span class="span1">购买数量：</span> <span class="span2"><a href="#" class="Remove"></a><input type="text" value="1"/><a href="#" class="Plus"></a><br style="clear:both" /></span><br style="clear:both" /></div>-->
+<div class="prwiew_btn_div"><!--购买数量 start-->
+	<div class="amount_body">
+	<a class="btn-reduce" href="javascript:void(0)" onclick="pi_numUP('remove')">-</a>
+	<a class="btn-add" href="javascript:void(0)" onclick="pi_numUP('add')">+</a>
+	<input class="text" id="bnum" name="bnum" value="1" onBlur="pi_numUP('')">
+	</div>
+	<!--购买数量 end-->
+	<a href='tks_buy.php?addcode=XD0095' onclick="pi_numSUB(this,'XD0095')" target='_blank' class='buy_btn'>加入购物车</a> <a href="#" target="btm_ifr" class="guangzhu_btn" id="afav">关注</a><br style="clear:both;"></div>
+</div><!--pr_preview_right end-->
+<br style="clear:both" />
+</div>
+<!--pr_preview_body end-->
+
+<div class="pr_tuwenbody">
+<div class="pr_tuwen_left flt">
+<div class="er_main_l_new" style="margin:0px;">
+<div class="emln">相关推荐</div>
+<div class='emln_p_i'>
+	<a href=prods/XD/XD0114.html target='_blank'><img src='picture/xd0114.jpg' title='现代（HYUNDAI）TWS真无线入耳式蓝牙音乐耳机升级版 红色 YH-B001' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/XD/XD0114.html title='现代（HYUNDAI）TWS真无线入耳式蓝牙音乐耳机升级版 红色 YH-B001' target='_blank'>现代（HYUNDAI）TWS真无线入耳式蓝牙音乐耳机升级版 红色 YH-B001..</a>
+	<span>￥338.00</span>
+	</div><div class='emln_p_i'>
+	<a href=prods/XD/XD0096.html target='_blank'><img src='picture/xd0096.jpg' title='现代（HYUNDAI）无线蓝牙商务单耳耳机 黑色 H904' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/XD/XD0096.html title='现代（HYUNDAI）无线蓝牙商务单耳耳机 黑色 H904' target='_blank'>现代（HYUNDAI）无线蓝牙商务单耳耳机 黑色 H904</a>
+	<span>￥99.00</span>
+	</div></div>
+
+<div class="er_main_l_new">
+<div class="emln">同类排行</div>
+<div class="emln_p">
+<dl>
+<dd style='background:url(images/ph_01.png) no-repeat;'>
+		<a style='float:left;' href=prods/JA/JA0110.html target='_blank'><img src='picture/ja0110.jpg' title='捷波朗（Jabra）BOOST 劲步 蓝牙耳机 黑色' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/JA/JA0110.html title='捷波朗（Jabra）BOOST 劲步 蓝牙耳机 黑色' target='_blank'>捷波朗（Jabra）BOOST 劲步 蓝牙耳..</a>
+		<span style='font-size:16px; color:#d50401;'>￥199.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_02.png) no-repeat;'>
+		<a style='float:left;' href=prods/XD/XD0086.html target='_blank'><img src='picture/xd0086.jpg' title='现代（HYUNDAI）F11蓝牙耳机' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/XD/XD0086.html title='现代（HYUNDAI）F11蓝牙耳机' target='_blank'>现代（HYUNDAI）F11蓝牙耳机..</a>
+		<span style='font-size:16px; color:#d50401;'>￥298.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_03.png) no-repeat;'>
+		<a style='float:left;' href=prods/XD/XD0096.html target='_blank'><img src='picture/xd0096.jpg' title='现代（HYUNDAI）无线蓝牙商务单耳耳机 黑色 H904' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/XD/XD0096.html title='现代（HYUNDAI）无线蓝牙商务单耳耳机 黑色 H904' target='_blank'>现代（HYUNDAI）无线蓝牙商务单耳耳机 ..</a>
+		<span style='font-size:16px; color:#d50401;'>￥99.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_04.png) no-repeat; padding-left:30px;'>
+		<a href=prods/JA/JA0005.html title='捷波朗（Jabra）Wave+弦月 耳后式3.0蓝牙耳机（带车载充电器）4048-230-309' target='_blank'>捷波朗（Jabra）Wave+弦月 耳后式3..</a>
+		<b>￥399.00</b>
+		</dd><dd style='background:url(images/ph_05.png) no-repeat; padding-left:30px;'>
+		<a href=prods/XD/XD0085.html title='现代（HYUNDAI）ATC185蓝牙耳机' target='_blank'>现代（HYUNDAI）ATC185蓝牙耳机..</a>
+		<b>￥199.00</b>
+		</dd><dd style='background:url(images/ph_06.png) no-repeat; padding-left:30px;'>
+		<a href=prods/JA/JA0105.html title='捷波朗（Jabra）MINI迷你商务通话蓝牙耳机 通用型 耳挂式 黑色' target='_blank'>捷波朗（Jabra）MINI迷你商务通话蓝牙..</a>
+		<b>￥245.00</b>
+		</dd><dd style='background:url(images/ph_07.png) no-repeat; padding-left:30px;'>
+		<a href=prods/XD/XD0094.html title='现代（HYUNDAI）无线智能蓝牙运动耳机 黑色 YH-B003' target='_blank'>现代（HYUNDAI）无线智能蓝牙运动耳机 ..</a>
+		<b>￥129.00</b>
+		</dd><dd style='background:url(images/ph_08.png) no-repeat; padding-left:30px;'>
+		<a href=prods/XD/XD0055.html title='现代（HYUNDAI） 蓝牙耳机 HEP1203' target='_blank'>现代（HYUNDAI） 蓝牙耳机 HEP12..</a>
+		<b>￥119.00</b>
+		</dd><dd style='background:url(images/ph_09.png) no-repeat; padding-left:30px;'>
+		<a href=prods/XD/XD0093.html title='现代（HYUNDAI）TWS真无线入耳式蓝牙音乐耳机升级版 黑色 YH-B001' target='_blank'>现代（HYUNDAI）TWS真无线入耳式蓝牙..</a>
+		<b>￥338.00</b>
+		</dd><dd style='background:url(images/ph_10.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT3007.html title='I-FROGZ 耳机 EPD33-black' target='_blank'>I-FROGZ 耳机 EPD33-black..</a>
+		<b>￥83.00</b>
+		</dd></dl>
+</div>
+</div>
+</div><!--pr_tuwen_left end-->
+<div class="pr_tuwen_right flt">
+<div class="pr_tuwen_titile">
+<a id="wai0" style="background:#afafaf;color:#fff;" href="javascript:void(0)" onclick="javascript:Menum('0');">详细介绍</a></div>
+<div class="pr_tuwen_img" id="conm0" style=" text-align:center;padding-top:10px;">
+<div style='text-align:left;padding:10px;'>暂时无此商品的介绍...</div><br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+<!--商品规格-->
+<div class="pr_tuwen_img" id="conm2" style="display:none;">
+<div style='text-align:left;padding:10px'> </div>
+
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+<!--相关参数-->
+<div class="pr_tuwen_img" id="conm3" style="display:none;">
+<div style='text-align:left;padding:10px'>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+</table>
+</div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+
+<!--适用范围-->
+<div class="pr_tuwen_img" id="conm4" style="display:none;">
+<div style='text-align:left;padding:10px'> </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装规格-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'> </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装清单-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'> </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+
+
+<!--商品咨询-->
+<div class="pr_zixun" style="width:948px;height:auto;padding:20px;">
+<iframe width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" src="appifr.php?productcode=XD0095" id="appifr" name="appifr" style="height: 410px;"></iframe>
+</div>
+
+</div><!--pr_tuwen_right end-->
+<br style="clear:both" />
+
+
+
+</div><!--pr_tuwenbody end-->
+
+<script type="text/javascript">
+function GetObj(objName)
+{
+	if(document.getElementById)
+	{
+		return eval('document.getElementById("' + objName + '")');
+	}
+	else if(document.layers)
+	{
+		return eval("document.layers['" + objName +"']");
+	}
+	else
+	{
+		return eval('document.all.' + objName);
+	}
+}
+function Menum(index,flag)
+{
+	for(var i=0;i<10;i++)
+	{
+		if(GetObj("conm"+i) && GetObj("wai"+i))
+		{
+			GetObj("conm"+i).style.display = 'none';
+			//GetObj("wai"+i).className = "pag_off";
+			
+			GetObj("wai"+i).style.background="images/a419b6d976214176a9af8d093ff9da50.gif";
+			GetObj("wai"+i).style.color="#4f4f4f";
+		}
+	}
+	if(GetObj("conm"+index) && GetObj("wai"+index))
+	{
+		GetObj("conm"+index).style.display = 'block';
+		//GetObj("wai"+index).className = "pag_on";
+		GetObj("wai"+index).style.background="#afafaf";
+		GetObj("wai"+index).style.color="#fff";
+	}
+}
+
+fav_chk('XD0095');
+</script>
+
+
+<!--底部模板开始-->
+<style type="text/css">
+.yilou_bottom{height:40px;}
+.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
+.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
+.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
+.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
+.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+
+.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
+.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+
+.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
+.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+
+.bottom_main2{width:1200px; margin:0px auto;}
+.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
+.bottom_main2 .links a{margin:0px 10px;} 
+.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+</style>
+
+<!--加载公共底部信息-->
+<script type="text/javascript" src="js/bottom_src.js"></script>
+
+</body>
+</html>
+<!-- html 2019-06-10 16:54:01 -->

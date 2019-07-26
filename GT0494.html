@@ -1,0 +1,497 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="author" content="醒客商城">
+<meta name="keywords" content="">
+
+<title>3M R330 3×3英寸 黄色抽取式报事贴100页办公包装 - 醒客商城</title>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/hd.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript"> 
+$(function(){
+  //$("img").lazyload({placeholder : "images/grey.gif"});
+});
+</script>
+</head>
+<body>
+<div class="header">
+<div class="topbody1">
+<div class="topDiv1">
+<div class="topDiv1_right">
+<ul>
+<!--加载登录状态-->
+<script type="text/javascript" src="js/header_src_login.js"></script>
+</ul>
+</div>
+</div><!--topDiv1 end-->
+</div><!--topbody1 end-->
+
+<div class="topbody2" style=" position:relative;height:150px;">
+<div class="topbody2_div1"> 
+<div class="logo flt"><h1><a href="/"><img src="picture/logo.jpg" title="醒客商城-真醒客 多聚惠"></a></h1></div><!--logo end-->
+<div class="sousuo flt">
+
+<form name="formsh" action="tks_search.php" method="get">
+<div class="sousuo_form">
+<input type="text" class="input_01 flt" name="keyword" maxlength="50" value="商品搜索" autocomplete="off" onblur="if(this.value==''){this.value='商品搜索';}" onfocus="if(this.value=='商品搜索'){this.value='';}">
+<a href="javascript:gosh()" class="input_02 flt"> </a>
+<!--<input type="submit" value="" class="input_02 flt">-->
+<div class="cli"></div>
+</div>
+</form>
+</div><!--sousuo end-->
+
+<div class="top_nav flt">
+<a href="/brand_main.html" class="a2" onmouseover="HD_dh(2)" id="HDtag2">品牌专区</a>
+<a href="/" class="a1" onmouseover="HD_dh(1)" id="HDtag1" style="background:url(images/new_daabj.jpg) no-repeat;color:#ea2222;">商品分类</a>
+<br style="clear:both" />
+</div><!--top_nav end-->
+
+<div class="cli"></div> 
+</div>
+<!--topbody2_div1 end-->
+<!--加载分类状态-->
+<script type="text/javascript" src="js/header_src_catalog.js"></script>
+</div><!--topbody2 end-->
+</div>
+<script type="text/javascript">
+Mu_addLoadEvent(Mu_onload);
+</script>
+<!--头部模板结束-->
+
+
+<!--商品介绍页-->
+<script src="js/jquery.jqzoom.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+<script src="js/prod_browse.js"></script>
+
+<script type="text/javascript">
+function fav_chk(productcode)
+{
+	//监测商品关注状态
+	var par1=productcode;
+	$.ajax({
+		url: '/js/chkfav.php?enforce=chk&r='+Math.random(),
+		data: {productcode:par1},
+		type: 'GET',
+		timeout: 10000,
+		error: function () 
+		{
+			//alert('操作失败！');
+		},
+		success: function (data) 
+		{
+			eval('myR=' + data);
+			fav_upsta(productcode,myR['retid']);
+		}
+	});
+	return true;
+}
+
+function fav_upsta(productcode,fsta)
+{
+	//改变关注按状态
+	var afav=document.getElementById('afav');
+	var fstr='',tit='',enforce='';
+	if (fsta==1)
+	{
+		fstr='已关注';
+		tit='点击取消关注';
+		enforce='unfav';
+	}
+	else
+	{
+		fstr='关注';
+		tit='点击关注';
+		enforce='fav';
+	}
+	afav.innerHTML=fstr;
+	afav.title=tit;
+	afav.href='/js/chkfav.php?productcode='+productcode+'&enforce='+enforce;
+}
+
+function pi_numUP(enforce)
+{
+	//更新购买数量
+	var num_obj=document.getElementById('bnum');
+	if (!isInt(num_obj.value)){num_obj.value=1;} 	//纠正数量
+	var ori_num=Number(num_obj.value);				//原商品数量
+	
+	//生成新商品数量
+	if (!ori_num || ori_num<=0){new_num=1;}
+	else{new_num=ori_num;}
+	
+	if (enforce=='remove'){new_num--;}
+	else if (enforce=='add'){new_num++;}
+	else{new_num=ori_num;}
+	if (new_num<=0){new_num=1;}
+	
+	num_obj.value=new_num;
+}
+
+function pi_numSUB(tobj,pcode)
+{
+	//提交购买
+	var bnum=document.getElementById('bnum').value;
+	var burl="tks_buy.php?addcode="+pcode+"&addnum="+bnum;
+	tobj.href=burl;
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/list.css">
+
+<!--导航-->
+<div class="navtop">
+<span class='er_bt'><a href=cata/thCata_107.html>文体办公</a></span><a class='er_sbt' href=cata/thCata_107_47.html>&nbsp;&gt;&nbsp;文具</a><a class='er_sbt' href=cata/thCata_107_47_249.html>&nbsp;&gt;&nbsp;报事贴</a></div>
+<!--导航结束-->
+
+<!--pr_preview_body start-->
+<div class="pr_preview_body">
+
+<!--商品图片放大效果 start-->
+<div class="pr_preview_left">
+ <div class="lanrenzhijia">
+<!-- 大begin -->
+<div id="preview" class="spec-preview" > 
+<span class='jqzoom'><img jqimg='/zm_watermark.php?pvalue=iMvDoZHxnkk05Tj3%2FgoIAA%3D%3D' src='picture/01.jpg' width='200' height='200'></span></div>
+<!-- 大图end -->
+<!-- 缩略图begin -->
+<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+<div class="items">
+<ul>
+<li><img bimg='/zm_watermark.php?pvalue=iMvDoZHxnkk05Tj3%2FgoIAA%3D%3D' src='picture/01.jpg' onmousemove='preview(this)'></li><li><img bimg='/zm_watermark.php?pvalue=iMvDoZHxnkn6rouoO8fiRA%3D%3D' src='picture/04.jpg' onmousemove='preview(this)'></li></ul>
+</div>
+</div>
+<!-- 缩略图end -->
+</div>
+</div><!--商品图片放大效果 end-->
+
+
+
+<div class="pr_preview_right">
+<div class="pr_name">3M R330 3×3英寸 黄色抽取式报事贴100页办公包装</div>
+<div class="pr_jiage1 prmar_20"><span class="span1">市场价格：</span><span class="span2"><b>￥6.50</b></span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">醒客价格：</span><span class="span2">￥4.30</span><br style="clear:both" /></div>
+<div class="pr_jiage2 prmar_20"><span class="span1">人气指数：</span><span class="span2" style="color:#b8b8b8;font-size:12px;">7390</span><br style="clear:both" /></div>
+
+<div class="pr_jiage3 prmar_20"><span class="span1">醒客编号：</span><span class="span2">GT0494</span> <br style="clear:both" /></div>
+<div class="pr_jiage4 prmar_20"><span class="span1" style=" display:block; float:left;">厂商编号：</span><span class="span2" style=" display:block; float:left;width:317px;margin:0px;">R330</span><span class="span3">厂商：</span><span class="span4"><a href='brand.php?brandid=3&pma_code=107&cat_code=47'>3M</a></span><br style="clear:both" /></div>
+<!--  <div class="prwiew_no_div"><span class="span1">购买数量：</span> <span class="span2"><a href="#" class="Remove"></a><input type="text" value="1"/><a href="#" class="Plus"></a><br style="clear:both" /></span><br style="clear:both" /></div>-->
+<div class="prwiew_btn_div"><!--购买数量 start-->
+	<div class="amount_body">
+	<a class="btn-reduce" href="javascript:void(0)" onclick="pi_numUP('remove')">-</a>
+	<a class="btn-add" href="javascript:void(0)" onclick="pi_numUP('add')">+</a>
+	<input class="text" id="bnum" name="bnum" value="1" onBlur="pi_numUP('')">
+	</div>
+	<!--购买数量 end-->
+	<a href='tks_buy.php?addcode=GT0494' onclick="pi_numSUB(this,'GT0494')" target='_blank' class='buy_btn'>加入购物车</a> <a href="#" target="btm_ifr" class="guangzhu_btn" id="afav">关注</a><br style="clear:both;"></div>
+</div><!--pr_preview_right end-->
+<br style="clear:both" />
+</div>
+<!--pr_preview_body end-->
+
+<div class="pr_tuwenbody">
+<div class="pr_tuwen_left flt">
+<div class="er_main_l_new" style="margin:0px;">
+<div class="emln">相关推荐</div>
+<div class='emln_p_i'>
+	<a href=prods/MM/MM0080.html target='_blank'><img src='picture/mm0080.jpg' title='3M 思高6英寸不锈钢剪刀 1406' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/MM/MM0080.html title='3M 思高6英寸不锈钢剪刀 1406' target='_blank'>3M 思高6英寸不锈钢剪刀 1406</a>
+	<span>￥8.50</span>
+	</div><div class='emln_p_i'>
+	<a href=prods/MM/MM0063.html target='_blank'><img src='picture/mm0063.jpg' title='3M 1468 思高钛金属涂层剪刀 (8寸)' width='145' height='145' border='0'></a>
+	</div>
+	<div class='emln_p_m'>
+	<a href=prods/MM/MM0063.html title='3M 1468 思高钛金属涂层剪刀 (8寸)' target='_blank'>3M 1468 思高钛金属涂层剪刀 (8寸)</a>
+	<span>￥59.00</span>
+	</div></div>
+
+<div class="er_main_l_new">
+<div class="emln">同类排行</div>
+<div class="emln_p">
+<dl>
+<dd style='background:url(images/ph_01.png) no-repeat;'>
+		<a style='float:left;' href=prods/GT/GT3063.html target='_blank'><img src='picture/gt3063.jpg' title='3M 思高甜甜圈胶台(草莓)' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/GT/GT3063.html title='3M 思高甜甜圈胶台(草莓)' target='_blank'>3M 思高甜甜圈胶台(草莓)..</a>
+		<span style='font-size:16px; color:#d50401;'>￥14.00</span>
+		</span>
+		</dd><dd style='background:url(images/ph_02.png) no-repeat;'>
+		<a style='float:left;' href=prods/GT/GT3719.html target='_blank'><img src='picture/gt3719.jpg' title='3M 思高甜甜圈胶台(香橙)' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/GT/GT3719.html title='3M 思高甜甜圈胶台(香橙)' target='_blank'>3M 思高甜甜圈胶台(香橙)..</a>
+		<span style='font-size:16px; color:#d50401;'>￥14.50</span>
+		</span>
+		</dd><dd style='background:url(images/ph_03.png) no-repeat;'>
+		<a style='float:left;' href=prods/GT/GT0494.html target='_blank'><img src='picture/gt0494.jpg' title='3M R330 3×3英寸 黄色抽取式报事贴100页办公包装' width='70' height='70' border='0'></a>
+		<span style='float:left; width:88px;'>
+		<a href=prods/GT/GT0494.html title='3M R330 3×3英寸 黄色抽取式报事贴100页办公包装' target='_blank'>3M R330 3×3英寸 黄色抽取式报事贴..</a>
+		<span style='font-size:16px; color:#d50401;'>￥4.30</span>
+		</span>
+		</dd><dd style='background:url(images/ph_04.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0499.html title='3M 680-2pk-3,20片 指示标签 2色装(黄+紫)' target='_blank'>3M 680-2pk-3,20片 指示标签 ..</a>
+		<b>￥5.10</b>
+		</dd><dd style='background:url(images/ph_05.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0510.html title='3M 103 3/4x4M神奇隐形胶带(带简易切割座)' target='_blank'>3M 103 3/4x4M神奇隐形胶带(带简..</a>
+		<b>￥2.97</b>
+		</dd><dd style='background:url(images/ph_06.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0565.html title='3M R130 荧光色(粉)报事贴' target='_blank'>3M R130 荧光色(粉)报事贴..</a>
+		<b>￥2.90</b>
+		</dd><dd style='background:url(images/ph_07.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0587.html title='3M 811 1/2 33m可再贴神奇隐形胶带' target='_blank'>3M 811 1/2 33m可再贴神奇隐形胶..</a>
+		<b>￥17.00</b>
+		</dd><dd style='background:url(images/ph_08.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0616.html title='3M R330P 3×3英寸 粉彩色(粉)抽取式报事贴100页' target='_blank'>3M R330P 3×3英寸 粉彩色(粉)抽..</a>
+		<b>￥5.60</b>
+		</dd><dd style='background:url(images/ph_09.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0617.html title='3M R330P 3×3英寸 粉彩色(蓝)抽取式报事贴100页' target='_blank'>3M R330P 3×3英寸 粉彩色(蓝)抽..</a>
+		<b>￥5.60</b>
+		</dd><dd style='background:url(images/ph_10.png) no-repeat; padding-left:30px;'>
+		<a href=prods/GT/GT0618.html title='3M R330P 3×3英寸 粉彩色(绿)抽取式报事贴100页' target='_blank'>3M R330P 3×3英寸 粉彩色(绿)抽..</a>
+		<b>￥5.60</b>
+		</dd></dl>
+</div>
+</div>
+</div><!--pr_tuwen_left end-->
+<div class="pr_tuwen_right flt">
+<div class="pr_tuwen_titile">
+<a id="wai0" style="background:#afafaf;color:#fff;" href="javascript:void(0)" onclick="javascript:Menum('0');">详细介绍</a><a id="wai1" href="javascript:void(0)" onclick="javascript:Menum('1');">文字介绍</a><a id="wai2" href="javascript:void(0)" onclick="javascript:Menum('2');">商品规格</a><a id="wai3" href="javascript:void(0)" onclick="javascript:Menum('3');">相关参数</a><a id="wai4" href="javascript:void(0)" onclick="javascript:Menum('4');">适用范围</a><a id="wai5" href="javascript:void(0)" onclick="javascript:Menum('5');">包装规格</a><a id="wai6" href="javascript:void(0)" onclick="javascript:Menum('6');">包装清单</a></div>
+<div class="pr_tuwen_img" id="conm0" style=" text-align:center;padding-top:10px;">
+<iframe src="introHtml/GT0494/index.html" name="productinfo" id="productinfo" width="770" height="500" marginwidth="0" marginheight="0" scrolling="No" frameborder="0" border="0"></iframe><br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+<!--文字介绍-->
+	<div class="pr_tuwen_img" id="conm1" style="display:none;">
+	<div style='text-align:left;padding:10px'>1981年3M首创的Post-it 报事帖 可再帖便条纸，为办公室文化带来了一场全新的革命，其独有易粘易撕的粘合剂，可随意粘帖于任何表面，撕下时，表面无痕迹，它已成为现代办公及家庭生活必不可少的办公用品之一，并已运用到电脑中而发展成为Post-it 报事帖电脑软件。Post-it 报事帖可再帖便条纸是全球销量第一的可再帖便条纸。<br />
+<br />
+*抽取式设计，随身携带，取用方便<br />
+*办公室、家居及个人备忘便条。<br />
+*把留言或办事项贴于显眼处，为可靠之个人备忘便条。 <br />
+*把讯息写上，贴于显眼处，传递口讯或留言，轻而易举。<br />
+*可配合C-301及C-4216便条座，取用更便捷。<br />
+*其独有配方的神奇粘胶可让您随意撕帖，反复使用。<br />
+</div>
+    
+    <br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+    
+	</div>
+<!--商品规格-->
+<div class="pr_tuwen_img" id="conm2" style="display:none;">
+<div style='text-align:left;padding:10px'>颜色：黄色<br />
+页面规格：76mm*76mm(3英寸*3英寸)<br />
+          100片/本,办公装<br />
+       </div>
+
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+<!--相关参数-->
+<div class="pr_tuwen_img" id="conm3" style="display:none;">
+<div style='text-align:left;padding:10px'>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr height='22'>
+	<td width="11%">商品产地：</td>
+	<td width="89%">美国</td>
+	</tr><tr height='22'>
+	<td width="11%">商品重量：</td>
+	<td width="89%">0.05 (千克)</td>
+	</tr>
+</table>
+</div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+
+</div>
+
+
+
+
+
+<!--适用范围-->
+<div class="pr_tuwen_img" id="conm4" style="display:none;">
+<div style='text-align:left;padding:10px'>电话留言<br />
+传递信息<br />
+摘要提示 </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装规格-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'>包装规格：76cm*76cm*10cm<br />
+          办公装 </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+<!--包装清单-->
+<div class="pr_tuwen_img" id="conm5" style="display:none;">
+<div style='text-align:left;padding:10px'>3M R330 抽取式报事贴(黄色) 1本 </div>
+<br />
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">免责声明：</b><br />
+醒客商城中所载商品信息均来自于生产厂家，其真实性、准确性和合法性均由信息拥有者（生产厂家）负责。醒客商城不提供任何保证，且不承担任何法律责任。
+因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地和附件，所以醒客商城不确保客户收到的货物与商城所载图片、产地、附件包装清单完全一致。醒客商城只能确保本站内所销售商品均为原厂正
+品！若本商城没有及时更新商品信息，请大家谅解！</p>
+ 
+<p style="font-size:13px; text-align:left;"><b style="color:#ea2222;font-size:13px;">权利声明：</b><br />
+醒客商城网站上的所有商品信息、客户评价内容和商品咨询内容等，属醒客商城自有经营资源，未经许可，禁止他人转载使用。</p>
+</div>
+
+
+
+<!--商品咨询-->
+<div class="pr_zixun" style="width:948px;height:auto;padding:20px;">
+<iframe width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" src="appifr.php?productcode=GT0494" id="appifr" name="appifr" style="height: 410px;"></iframe>
+</div>
+
+</div><!--pr_tuwen_right end-->
+<br style="clear:both" />
+
+
+
+</div><!--pr_tuwenbody end-->
+
+<script type="text/javascript">
+function GetObj(objName)
+{
+	if(document.getElementById)
+	{
+		return eval('document.getElementById("' + objName + '")');
+	}
+	else if(document.layers)
+	{
+		return eval("document.layers['" + objName +"']");
+	}
+	else
+	{
+		return eval('document.all.' + objName);
+	}
+}
+function Menum(index,flag)
+{
+	for(var i=0;i<10;i++)
+	{
+		if(GetObj("conm"+i) && GetObj("wai"+i))
+		{
+			GetObj("conm"+i).style.display = 'none';
+			//GetObj("wai"+i).className = "pag_off";
+			
+			GetObj("wai"+i).style.background="images/a419b6d976214176a9af8d093ff9da50.gif";
+			GetObj("wai"+i).style.color="#4f4f4f";
+		}
+	}
+	if(GetObj("conm"+index) && GetObj("wai"+index))
+	{
+		GetObj("conm"+index).style.display = 'block';
+		//GetObj("wai"+index).className = "pag_on";
+		GetObj("wai"+index).style.background="#afafaf";
+		GetObj("wai"+index).style.color="#fff";
+	}
+}
+
+fav_chk('GT0494');
+</script>
+
+
+<!--底部模板开始-->
+<style type="text/css">
+.yilou_bottom{height:40px;}
+.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
+.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
+.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
+.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
+.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+
+.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
+.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+
+.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
+.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+
+.bottom_main2{width:1200px; margin:0px auto;}
+.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
+.bottom_main2 .links a{margin:0px 10px;} 
+.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+</style>
+
+<!--加载公共底部信息-->
+<script type="text/javascript" src="js/bottom_src.js"></script>
+
+</body>
+</html>
+<!-- html 2017-08-28 14:05:31 -->

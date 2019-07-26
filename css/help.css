@@ -1,0 +1,32 @@
+.navtop{padding:10px 0;width:1200px; margin:0 auto;}
+.er_bt{ font-size:20px; font-weight:bold; line-height:30px; background:url(../images/nav_red.png) no-repeat; padding-left:14px;}
+.er_sbt{ font-family:SimSun; font-size:14px;}
+
+.er_main{width:1200px;margin:0 auto; overflow:hidden;}
+.er_main_l{width:200px;float:left;}
+.er_main_l_nav{width:198px;}
+
+.er_main_l{width:200px;float:left;}
+
+/******/
+.brand_menu{width:198px;border:1px solid #dcdcdc;}
+.brand_menu_t{height:36px;background:#f6f6f6;}
+.brand_menu_t h1{line-height:35px;font-size:16px;font-weight:400;color:#646464; text-align:center;font-weight:bold;}
+.brand_menu ul li{height:35px;border-top:1px solid #dcdcdc;line-height:35px; text-align:right;line-height:35px;padding-right:55px;}
+.brand_menu ul li:hover{background:#989898;}
+.brand_menu ul li:hover a{color:#fff;}
+.brand_menu ul li.brand_menu_li{background:#989898;}
+.brand_menu ul li.brand_menu_li a{color:#fff;}
+
+.er_main_r{float:left;width:990px; height:auto;margin-left:8px;border:1px solid #dcdcdc;}
+.help_title{height:36px;line-height:35px;background:#f6f6f6;}
+.help_title h1{font-size:15px; font-weight:bold;padding-left:15px;}
+
+.help_main{height:auto;padding-bottom:50px;}
+.help_main p a{color:#4c81e2;}
+.help_main p a:hover{color:#ea2222;}
+.help_main .p1{padding:20px 30px;line-height:23px;}
+.help_main .p1 b{ display:block;height:40px;color:#ea2222;font-size:15px;}
+
+.myTable, .myTable td{ border:1px solid #cccccc; border-collapse: collapse; }
+.myTable td{padding:5px 8px; text-align:center;font-size:14px;color:#333333;

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="author" content="醒客商城">
+<meta name="keywords" content="">
+
+<title>醒客商城 - 登录</title>
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript"> 
+$(function(){
+  $("img").lazyload({placeholder : "images/grey.gif"});
+});
+</script>
+</head>
+<body>
+<div class="header">
+<div class="topbody1">
+<div class="topDiv1">
+<div class="topDiv1_right">
+<ul>
+<!--加载登录状态-->
+<script type="text/javascript" src="js/header_src_login.js"></script>
+</ul>
+</div>
+</div><!--topDiv1 end-->
+</div><!--topbody1 end-->
+</div>
+<!--头部模板结束-->
+<!--登录页模板-->
+<script src="js/addnum.js"></script>  
+<link rel="stylesheet" type="text/css" href="css/login.css">
+
+<script type="text/javascript">
+function lsubmit()
+{
+	var theForm=document.form1; 
+	if (theForm.cardnumber.value == "")
+	{
+		document.getElementById('prom1').innerHTML='请输入用户名';
+		theForm.cardnumber.focus();
+		return (false);
+	}
+	if (theForm.passwd.value == "")
+	{
+	document.getElementById('prom2').innerHTML='请输入密码';
+	theForm.passwd.focus();
+	return (false);
+	}
+	if (theForm.thcode.disabled ==false)
+	{
+		if (theForm.thcode.value == "")
+		{
+		document.getElementById('prom3').innerHTML='请输入验证码';
+		theForm.thcode.focus();
+		return (false);
+		}
+	}
+	theForm.submit();
+	return true;
+}
+
+function frset()
+{
+	document.form1.reset();
+}
+function clsprompt(sid)
+{
+	eval("sp=document.getElementById('"+sid+"')");
+	sp.innerHTML='';
+}
+function showthcode()
+{
+	var div_thcode1=document.getElementById('div_thcode1');
+	var div_thcode2=document.getElementById('div_thcode2');
+	var thcode=document.getElementById('thcode');
+	div_thcode1.style.display='';
+	div_thcode2.style.display='';
+	thcode.disabled=false;
+	loadimage();
+}
+
+function subprom()
+{
+	document.getElementById('prom1').innerHTML='用户名或密码错误，请重试';
+	document.getElementById('prom2').innerHTML='';
+	document.getElementById('prom3').innerHTML='';
+	loadimage();
+}
+function thcodeprom()
+{
+	document.getElementById('prom3').innerHTML='验证码错误，请重试';
+	document.getElementById('prom1').innerHTML='';
+	document.getElementById('prom2').innerHTML='';
+	loadimage();
+}
+
+function loadimage()
+{
+	obj=document.getElementById("thcodeimg");
+	obj.src = "thcode2.php?"+Math.random();
+}
+</script>
+
+
+<div class="login_body">
+<div class="login_logo"><h1><a href="/"><img  src="picture/logo.jpg"></a></h1></div>
+<form name="form1" action="login.php" method="post" target="ifr1">
+
+<div class="login_main" style="height:505px;background:url(images/logobjj.jpg) no-repeat left top; ">
+<div class="login_main_div" style="width:450px;margin-left:697px; position:relative;top:50px;"> 
+<div class="login_name"><span class="span1">用户名或邮箱</span> <span class="span2">没有账号？<a href="ureg.php">免费注册</a></span><br style="clear:both" /></div>
+<div class="login_input1"><input type="text" class="login_input" name="cardnumber" id="cardnumber" value="" maxlength="50" onBlur="clsprompt('prom1')"/> 
+	<span class='red' id='prom1'></span></div>
+
+<div class="login_name"><span class="span1">密　码</span> <span class="span2"><a href="ufpwd.php">忘记密码？</a></span><br style="clear:both" /></div>
+<div class="login_input1"><input type="password" class="login_input" name="passwd" id="passwd" maxlength="25" onBlur="clsprompt('prom2')"/>
+	<span class='red' id='prom2'></span></div>
+
+<div class="login_name" id="div_thcode1" style="display:none"><span class="span1" >验证码</span> <br style="clear:both" /></div>
+<div class="login_input1" id="div_thcode2" style="display:none"><input type="text" name="thcode" id="thcode" class="login_input" style="width:80px;" maxlength="4" autocomplete="off" onBlur="clsprompt('prom3')" disabled/>
+<img src="picture/thcode2.php" style="margin-left:10px;margin-bottom:-10px;cursor:pointer;" id="thcodeimg" onclick="loadimage()" title="点击更换">
+<br><span class='red' id='prom3'></span>
+</div>
+
+<div class="item-ifo"><label><input type="checkbox" name="saveLoin" id="saveLoin" value="Y" style="position:relative;top:2px;" checked /> &nbsp;记住登录状态</label></div>
+<div class="login_btn"><a href="javascript:void(0)" onclick="javascript:lsubmit()">登&nbsp;录</a></div>
+
+</div><!--login_main_div end-->	
+</div>
+<input type="hidden" name="url" value="">
+<input type="hidden" name="Bsubmit" value="Y">
+</form>
+</form>
+</div>
+<iframe frameborder="0" name="ifr1" id="ifr1" height="0" width="0%" scrolling="no"></iframe>
+<script type="text/javascript">
+var thcodeTag="N";
+if (thcodeTag=="Y")
+{
+	showthcode();
+}
+</script>
+
+<!--底部模板开始-->
+<style type="text/css">
+.yilou_bottom{height:40px;}
+.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
+.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
+.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+
+.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
+.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
+.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+
+.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
+.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+
+.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
+.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+
+.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
+.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+
+.bottom_main2{width:1200px; margin:0px auto;}
+.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
+.bottom_main2 .links a{margin:0px 10px;} 
+.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+</style>
+
+<!--加载公共底部信息-->
+<script type="text/javascript" src="js/bottom_src.js"></script>
+
+</body>
+</html>
