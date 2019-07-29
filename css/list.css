@@ -1,5 +1,8 @@
 
 /***����ҳ����ʽ***/
+.none{
+    display: none;
+}
 .navtop{padding:10px 0;width:1200px; margin:0 auto;}
 .er_bt{ font-size:20px; font-weight:bold; line-height:30px; background:url(../images/nav_red.png) no-repeat; padding-left:14px;}
 .er_sbt{ font-family:SimSun; font-size:14px;}

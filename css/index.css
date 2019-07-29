@@ -78,10 +78,15 @@
 .yilou_title .yilou_span1{font-size:18px;font-weight:bold;padding-left:15px;}
 .yilou_title .yilou_span2{font-size:18px;padding-left:32px;}
 .yilou_title .yilou_span2 a{color:#fff;}
-
+.yilou_bottom_right ul{
+    display: none;
+}
 /******/
 .yilou_mainbody{height:558px;}
 .yilou_mainbody .yilou_main_left{width:208px;height:556px;border:1px solid #1b98ee; overflow:hidden;}
+.yilou_main_left ul{
+    visibility: hidden;
+}
 .yilou_main_left .yilou_main_left_img{height:280px;}
 .yilou_main_left .yilou_main_left_img a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
 .yilou_main_left ul{padding:10px 12px 0 12px;height:266px;}

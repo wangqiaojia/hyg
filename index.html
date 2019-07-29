@@ -70,11 +70,11 @@ Mu_addLoadEvent(Mu_onload);
 
 
 <script src="js/addnum.js"></script>  
-<div class="main1" style="display: none;">
+<div class="main1">
 	<div class="main1_center flt">
   	
     <!--banner start-->
-    	<iframe src="banner.html" name="top" id="top" width="981" marginwidth="0" height="360" marginheight="0" scrolling="No" frameborder="0" border="0" style="overflow:hidden;margin:0px;padding:0px;border:none;"></iframe>
+    	<iframe src="banner.html" name="top" id="top" width="100%" marginwidth="0" height="360" marginheight="0" scrolling="No" frameborder="0" border="0" style="overflow:hidden;margin:0px;padding:0px;border:none;"></iframe>
     <!--banner end-->
     
   </div><!--main1_center end-->
@@ -85,7 +85,7 @@ Mu_addLoadEvent(Mu_onload);
         	<li><a href='http://www.thinkshop.cn/sales/2016_51/' title='狂欢五一大惠战' target='_blank'>狂欢五一大惠战</a><span>[05-01]</span></li><li><a href='http://www.thinkshop.cn/sales/2016/' title='抢年货-醒客商城' target='_blank'>抢年货-醒客商城</a><span>[01-08]</span></li><li><a href='http://www.thinkshop.cn/sales/2015new_10/' title='毕业入职季来啦!' target='_blank'>毕业入职季来啦!</a><span>[07-30]</span></li><li><a href='http://www.thinkshop.cn/sales/2015new_9/' title='醒客品牌风' target='_blank'>醒客品牌风</a><span>[07-23]</span></li><li><a href='http://www.thinkshop.cn/sales/2015new_wgll/' title='“外公”来啦' target='_blank'>“外公”来啦</a><span>[07-09]</span></li><li><a href='http://www.thinkshop.cn/sales/2015new_8/' title='健康养生，任性生活' target='_blank'>健康养生，任性生活</a><span>[07-01]</span></li>        </ul>
     </div>
     
-    <div class="xinpin"><a href="/prods/MU/MU0005.html" target="_blank" title="Ki Power卡拉ok麦克音箱一体机（标配配彩色双麦颜色随机）BT30"><img src="picture/zhouwu.gif" /></a></div>
+    <div class="xinpin"><a href="javascript:;" target="_blank" title="Ki Power卡拉ok麦克音箱一体机（标配配彩色双麦颜色随机）BT30"><img src="picture/zhouwu.gif" /></a></div>
   </div><!--main1_right end-->
 </div>
 <!--main1 end-->
@@ -129,13 +129,13 @@ Mu_addLoadEvent(Mu_onload);
 				<div class="p-price">￥135.00</div>
 				<div class="p-name"><a href=./XD0053.html title="现代（HYUNDAI）音乐播放器 无线蓝牙音箱 低音炮 黑色 i700PRO" target="_blank">现代（HYUNDAI）音乐播放器 无线蓝牙音箱 低音炮 黑色 i..</a></div>
 				</li><li>
-				<div class="p-img"><a href=prods/HO/HO0002.html target="_blank"><img src='picture/ho0002.jpg' title='H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6' width='169' height='169' border='0'></a></div>
+				<div class="p-img"><a href=./HO0002.html target="_blank"><img src='picture/ho0002.jpg' title='H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6' width='169' height='169' border='0'></a></div>
 				<div class="p-price">￥1599.00</div>
-				<div class="p-name"><a href=prods/HO/HO0002.html title="H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6" target="_blank">H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6..</a></div>
+				<div class="p-name"><a href=./HO0002.html title="H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6" target="_blank">H0ST好帅 智能云教育机器人 好帅二蛋机器人 Q6..</a></div>
 				</li><li>
-				<div class="p-img"><a href=prods/HO/HO0006.html target="_blank"><img src='picture/ho0006.jpg' title='HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学儿童陪护正版音乐播放机' width='169' height='169' border='0'></a></div>
+				<div class="p-img"><a href=./HO0006.html target="_blank"><img src='picture/ho0006.jpg' title='HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学儿童陪护正版音乐播放机' width='169' height='169' border='0'></a></div>
 				<div class="p-price">￥899.00</div>
-				<div class="p-name"><a href=prods/HO/HO0006.html title="HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学儿童陪护正版音乐播放机" target="_blank">HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学..</a></div>
+				<div class="p-name"><a href=./HO0006.html title="HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学儿童陪护正版音乐播放机" target="_blank">HOST好帅 智能云教育机器人A5 亲子陪伴早教机英语学习机国学..</a></div>
 				</li><div class="cli"></div>
 </ul>
 </div><!--yilou_main_center end-->
@@ -652,6 +652,22 @@ function mcancelclosetime()
 	}
 }
 //document.onclick = mclose; 
+$(function(){
+	$('.yilou_bottom_left').html('');
+	$('.yilou_main_left_img a').on('click',function(e){
+		e.preventDefault()
+	});
+	$('.yilou').each(function(index,item,arr){
+			$(item).find('.yilou_span2 a').on('click',function(e){
+					e.preventDefault()
+			});
+			$(item).find('.yilou_main_center li a,.yilou_main_right a').on('click',function(e){
+				if(index!=0){
+					e.preventDefault()
+				}
+			})
+	});
+})
 </script>
 
 
