@@ -11,12 +11,10 @@ document.write('<a href="http://www.allsmart.com/new/" target="_blank" style="bo
 document.write('</div><!--bottom_main1 end-->');
 
 
-
 document.write('<div class="bottom_main3" style="width:190px;height:30px;margin:0px auto;margin-top:10px;">');
 document.write('<a href="renzheng1.php" target="_blank" class="a1">食品经营许可证</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
 document.write('<a href="renzheng2.php" target="_blank" class="a2">酒类备案</a>');
 document.write('</div><!--bottom_main1 end-->');
-
 
 
 document.write('<div class="bottom_main2">');

@@ -1,218 +1,318 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<meta name="author" content="醒客商城">
-<meta name="keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="author" content="醒客商城">
+    <meta name="keywords" content="">
 
-<title>醒客商城</title>
-<link rel="stylesheet" type="text/css" href="css/style1.css">
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<script type="text/javascript" src="js/base.js"></script>
-<script type="text/javascript" src="js/hd.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
-<script type="text/javascript" src="js/mycart.js"></script>
-<script type="text/javascript" src="js/jquery.lazyload.js"></script>
-<script type="text/javascript" src="js/ajax.js"></script>
-<script type="text/javascript" src="js/json2.js"></script>
-<script type="text/javascript"> 
-$(function(){
-  //$("img").lazyload({placeholder : "images/grey.gif"});
-});
-</script>
+    <title>醒客商城</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/hd.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+    <script type="text/javascript" src="js/mycart.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$("img").lazyload({placeholder : "images/grey.gif"});
+        });
+    </script>
 </head>
 <body>
 <div class="header">
-<div class="topbody1">
-<div class="topDiv1">
-<div class="topDiv1_right">
-<ul>
-<!--加载登录状态-->
-<script type="text/javascript" src="js/header_src_login.js"></script>
-</ul>
-</div>
-</div><!--topDiv1 end-->
-</div><!--topbody1 end-->
+    <div class="topbody1">
+        <div class="topDiv1">
+            <div class="topDiv1_right">
+                <ul>
+                    <!--加载登录状态-->
+                    <script type="text/javascript" src="js/header_src_login.js"></script>
+                </ul>
+            </div>
+        </div><!--topDiv1 end-->
+    </div><!--topbody1 end-->
 
-<div class="topbody2" style=" position:relative;height:150px;">
-<div class="topbody2_div1"> 
-<div class="logo flt"><h1><a href="/"><img src="picture/logo.jpg" title="醒客商城-真醒客 多聚惠"></a></h1></div><!--logo end-->
-<div class="sousuo flt">
+    <div class="topbody2" style=" position:relative;height:150px;">
+        <div class="topbody2_div1">
+            <div class="logo flt"><h1><a href="/"><img src="picture/logo.jpg" title="醒客商城-真醒客 多聚惠"></a></h1></div>
+            <!--logo end-->
+            <div class="sousuo flt">
 
-<form name="formsh" action="tks_search.php" method="get">
-<div class="sousuo_form">
-<input type="text" class="input_01 flt" name="keyword" maxlength="50" value="商品搜索" autocomplete="off" onblur="if(this.value==''){this.value='商品搜索';}" onfocus="if(this.value=='商品搜索'){this.value='';}">
-<a href="javascript:gosh()" class="input_02 flt"> </a>
-<!--<input type="submit" value="" class="input_02 flt">-->
-<div class="cli"></div>
-</div>
-</form>
-</div><!--sousuo end-->
+                <form name="formsh" action="tks_search.php" method="get">
+                    <div class="sousuo_form">
+                        <input type="text" class="input_01 flt" name="keyword" maxlength="50" value="商品搜索"
+                               autocomplete="off" onblur="if(this.value==''){this.value='商品搜索';}"
+                               onfocus="if(this.value=='商品搜索'){this.value='';}">
+                        <a href="javascript:gosh()" class="input_02 flt"> </a>
+                        <!--<input type="submit" value="" class="input_02 flt">-->
+                        <div class="cli"></div>
+                    </div>
+                </form>
+            </div><!--sousuo end-->
 
-<div class="top_nav flt">
-<a href="/brand_main.html" class="a2" onmouseover="HD_dh(2)" id="HDtag2">品牌专区</a>
-<a href="/" class="a1" onmouseover="HD_dh(1)" id="HDtag1" style="background:url(images/new_daabj.jpg) no-repeat;color:#ea2222;">商品分类</a>
-<br style="clear:both" />
-</div><!--top_nav end-->
+            <div class="top_nav flt">
+                <a href="/brand_main.html" class="a2" onmouseover="HD_dh(2)" id="HDtag2">品牌专区</a>
+                <a href="/" class="a1" onmouseover="HD_dh(1)" id="HDtag1"
+                   style="background:url(images/new_daabj.jpg) no-repeat;color:#ea2222;">商品分类</a>
+                <br style="clear:both"/>
+            </div><!--top_nav end-->
 
-<div class="cli"></div> 
-</div>
-<!--topbody2_div1 end-->
-<!--加载分类状态-->
-<script type="text/javascript" src="js/header_src_catalog.js"></script>
-</div><!--topbody2 end-->
+            <div class="cli"></div>
+        </div>
+        <!--topbody2_div1 end-->
+        <!--加载分类状态-->
+        <script type="text/javascript" src="js/header_src_catalog.js"></script>
+    </div><!--topbody2 end-->
 </div>
 <script type="text/javascript">
-Mu_addLoadEvent(Mu_onload);
+    Mu_addLoadEvent(Mu_onload);
 </script>
 <!--头部模板结束-->
 
 
-	<div class="banner"></div><!--banner-->
-    <div class="center">
-    	<div class="title1"><img src="picture/hp.png" /></div>
-        <div class="nav1">
-        	<h1 class="h1_1" onmouseover="ying(1)" id="kao1"  style="background:url(images/lsbj.png) no-repeat;"><img src="picture/pc_title.png"></h1>
-            <h1 class="h1_2" onmouseover="ying(2)" id="kao2"><img src="picture/ms_title.png"></h1>
-            <br style="clear:both" />
-        </div>
-        
-        <div class="main_pc" id="hp1">
-        	
-            <a href="http://www.thinkshop.cn/prods/HP/HP0504.html" target="_blank"><img src="picture/1.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0506.html" target="_blank"><img src="picture/2.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0519.html" target="_blank"><img src="picture/3.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0565.html" target="_blank"><img src="picture/4.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0567.html" target="_blank"><img src="picture/5.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0572.html" target="_blank"><img src="picture/6.jpg"></a>
-            <br style=" clear:both" />
-        </div>
-        
-        
-        <div class="main_pc" id="hp2" style="display:none;">
-        	
-            <a href="http://www.thinkshop.cn/prods/HP/HP0143.html" target="_blank"><img src="picture/11.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0099.html" target="_blank"><img src="picture/22.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0151.html" target="_blank"><img src="picture/33.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0257.html" target="_blank"><img src="picture/44.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0397.html" target="_blank"><img src="picture/55.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0405.html" target="_blank"><img src="picture/66.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0407.html" target="_blank"><img src="picture/77.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/HP/HP0559.html" target="_blank"><img src="picture/88.jpg"></a>
-            <br style=" clear:both" />
-        </div>
-        
-        
-        
-        <div class="title1" style="margin-top:20px;"><img src="picture/thinpad.png" /></div>
-        <div class="nav1">
-        	<h2 class="h2_1" onmouseover="ging(1)" id="nima1"  style="background:url(images/hsbj.png) no-repeat;"><img src="picture/pc_title.png"></h1>
-            <h2 class="h2_2" onmouseover="ging(2)" id="nima2" ><img src="picture/ms_title.png"></h1>
-            <br style="clear:both" />
-        </div>
-        
-        
-        
-         <div class="main_pc" id="tp1">
-        	
-            <a href="http://www.thinkshop.cn/prods/LX/LX0461.html" target="_blank"><img src="picture/1.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/LX/LX0463.html" target="_blank"><img src="picture/2.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/LX/LX0466.html" target="_blank"><img src="picture/3.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/LX/LX0326.html" target="_blank"><img src="picture/4.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/LX/LX0377.html" target="_blank"><img src="picture/5.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/LX/LX0454.html" target="_blank"><img src="picture/6.jpg"></a>
-            <br style=" clear:both" />
-        </div>
-        
-        
-        <div class="main_pc" id="tp2" style="display:none;">
-        	
-            <a href="http://www.thinkshop.cn/prods/GT/GT0214.html" target="_blank"><img src="picture/11.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/TK/TK0008.html" target="_blank"><img src="picture/22.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/OP/OP0300.html" target="_blank"><img src="picture/33.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/GT/GT2927.html" target="_blank"><img src="picture/44.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/GT/GT2928.html" target="_blank"><img src="picture/55.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/OP/OP0273.html" target="_blank"><img src="picture/66.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/OP/OP0326.html" target="_blank"><img src="picture/77.jpg"></a>
-            <a href="http://www.thinkshop.cn/prods/TP/TP0012.html" target="_blank"><img src="picture/88.jpg"></a>
-            <br style=" clear:both" />
-        </div>
-        
-        
-        
-        
-        <script type="text/javascript">
-		function ying(c){
-	    for(b=1;b<=2;b++){
-			
-			document.getElementById("hp"+b).style.display="none"
-			document.getElementById("kao"+b).style.background="url(images/lsbj_hover.png)  no-repeat"
-			}
-			
-		  document.getElementById("hp"+c).style.display="block"
-		  document.getElementById("kao"+c).style.background="url(images/ruzhi/lsbj.png)  no-repeat"
-	  }
-	  
-	  
-	  
-	  
-	  function ging(e){
-	    for(k=1;k<=2;k++){
-			
-			document.getElementById("tp"+k).style.display="none"
-			document.getElementById("nima"+k).style.background="url(images/hsbj_hover.png)  no-repeat"
-			}
-			
-		  document.getElementById("tp"+e).style.display="block"
-		  document.getElementById("nima"+e).style.background="url(images/ruzhi/hsbj.png)  no-repeat"
-	  }
-	  
-	  
-	</script>
-    
-        
-        
-    </div><!--center-->
+<div class="banner"></div><!--banner-->
+<div class="center">
+    <div class="title1"><img src="picture/hp.png"/></div>
+    <div class="nav1">
+        <h1 class="h1_1" onmouseover="ying(1)" id="kao1" style="background:url(images/lsbj.png) no-repeat;"><img
+                src="picture/pc_title.png"></h1>
+        <h1 class="h1_2" onmouseover="ying(2)" id="kao2"><img src="picture/ms_title.png"></h1>
+        <br style="clear:both"/>
+    </div>
+
+    <div class="main_pc" id="hp1">
+
+        <a href="http://www.thinkshop.cn/prods/HP/HP0504.html" target="_blank"><img src="picture/1.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0506.html" target="_blank"><img src="picture/2.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0519.html" target="_blank"><img src="picture/3.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0565.html" target="_blank"><img src="picture/4.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0567.html" target="_blank"><img src="picture/5.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0572.html" target="_blank"><img src="picture/6.jpg"></a>
+        <br style=" clear:both"/>
+    </div>
+
+
+    <div class="main_pc" id="hp2" style="display:none;">
+
+        <a href="http://www.thinkshop.cn/prods/HP/HP0143.html" target="_blank"><img src="picture/11.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0099.html" target="_blank"><img src="picture/22.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0151.html" target="_blank"><img src="picture/33.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0257.html" target="_blank"><img src="picture/44.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0397.html" target="_blank"><img src="picture/55.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0405.html" target="_blank"><img src="picture/66.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0407.html" target="_blank"><img src="picture/77.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/HP/HP0559.html" target="_blank"><img src="picture/88.jpg"></a>
+        <br style=" clear:both"/>
+    </div>
+
+
+    <div class="title1" style="margin-top:20px;"><img src="picture/thinpad.png"/></div>
+    <div class="nav1">
+        <h2 class="h2_1" onmouseover="ging(1)" id="nima1" style="background:url(images/hsbj.png) no-repeat;"><img
+                src="picture/pc_title.png"></h1>
+            <h2 class="h2_2" onmouseover="ging(2)" id="nima2"><img src="picture/ms_title.png"></h1>
+                <br style="clear:both"/>
+    </div>
+
+
+    <div class="main_pc" id="tp1">
+
+        <a href="http://www.thinkshop.cn/prods/LX/LX0461.html" target="_blank"><img src="picture/1.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/LX/LX0463.html" target="_blank"><img src="picture/2.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/LX/LX0466.html" target="_blank"><img src="picture/3.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/LX/LX0326.html" target="_blank"><img src="picture/4.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/LX/LX0377.html" target="_blank"><img src="picture/5.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/LX/LX0454.html" target="_blank"><img src="picture/6.jpg"></a>
+        <br style=" clear:both"/>
+    </div>
+
+
+    <div class="main_pc" id="tp2" style="display:none;">
+
+        <a href="http://www.thinkshop.cn/prods/GT/GT0214.html" target="_blank"><img src="picture/11.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/TK/TK0008.html" target="_blank"><img src="picture/22.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/OP/OP0300.html" target="_blank"><img src="picture/33.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/GT/GT2927.html" target="_blank"><img src="picture/44.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/GT/GT2928.html" target="_blank"><img src="picture/55.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/OP/OP0273.html" target="_blank"><img src="picture/66.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/OP/OP0326.html" target="_blank"><img src="picture/77.jpg"></a>
+        <a href="http://www.thinkshop.cn/prods/TP/TP0012.html" target="_blank"><img src="picture/88.jpg"></a>
+        <br style=" clear:both"/>
+    </div>
+
+
+    <script type="text/javascript">
+        function ying(c) {
+            for (b = 1; b <= 2; b++) {
+
+                document.getElementById("hp" + b).style.display = "none"
+                document.getElementById("kao" + b).style.background = "url(images/lsbj_hover.png)  no-repeat"
+            }
+
+            document.getElementById("hp" + c).style.display = "block"
+            document.getElementById("kao" + c).style.background = "url(images/ruzhi/lsbj.png)  no-repeat"
+        }
+
+
+        function ging(e) {
+            for (k = 1; k <= 2; k++) {
+
+                document.getElementById("tp" + k).style.display = "none"
+                document.getElementById("nima" + k).style.background = "url(images/hsbj_hover.png)  no-repeat"
+            }
+
+            document.getElementById("tp" + e).style.display = "block"
+            document.getElementById("nima" + e).style.background = "url(images/ruzhi/hsbj.png)  no-repeat"
+        }
+
+
+    </script>
+
+
+</div><!--center-->
 
 <!--底部模板开始-->
 <style type="text/css">
-.yilou_bottom{height:40px;}
-.yilou_bottom .yilou_bottom_left{width:210px;height:40px;background:url(images/brand_bj.gif) repeat-x; text-align:center;line-height:40px;color:#fff;font-size:16px;}
-.yilou_bottom .yilou_bottom_right{width:989px;height:39px;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
-.yilou_bottom_right ul li{ display:block; float:left;padding-left:50px;padding-top:6px;}
-.yilou_bottom_right ul li a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+    .yilou_bottom {
+        height: 40px;
+    }
 
-.bottombody{width:100%;height:240px;background:#f6f6f6;margin-top:25px;}
-.bottombody .bottom_main1{width:1200px;height:82px;border-bottom:1px solid #e6e6e6;margin:0px auto; text-align:center;padding-top:37px;}
-.bottombody .bottom_main1 a{padding:0px 10px; display:block; float:left;height:50px;padding-top:37px;}
+    .yilou_bottom .yilou_bottom_left {
+        width: 210px;
+        height: 40px;
+        background: url(images/brand_bj.gif) repeat-x;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
 
-.bottombody .bottom_main1 .a1{background:url(images/bottbj1.jpg) top center no-repeat;margin-left:285px;}
-.bottombody .bottom_main1 .a1:hover{background:url(images/bottbj1_hover.jpg) top center no-repeat;margin-left:285px;}
+    .yilou_bottom .yilou_bottom_right {
+        width: 989px;
+        height: 39px;
+        border-bottom: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+    }
 
-.bottombody .bottom_main1 .a2{background:url(images/bottbj2.jpg) top center no-repeat; }
-.bottombody .bottom_main1 .a2:hover{background:url(images/bottbj2_hover.jpg) top center no-repeat; }
+    .yilou_bottom_right ul li {
+        display: block;
+        float: left;
+        padding-left: 50px;
+        padding-top: 6px;
+    }
 
-.bottombody .bottom_main1 .a3{background:url(images/bottbj3.jpg) top center no-repeat;}
-.bottombody .bottom_main1 .a3:hover{background:url(images/bottbj3_hover.jpg) top center no-repeat; }
+    .yilou_bottom_right ul li a:hover img {
+        filter: alpha(opacity=90);
+        -moz-opacity: 0.9;
+        -khtml-opacity: 0.9;
+        opacity: 0.9;
+    }
 
-.bottombody .bottom_main1 .a4{background:url(images/bottbj4.jpg) top center no-repeat;}
-.bottombody .bottom_main1 .a4:hover{background:url(images/bottbj4_hover.jpg) top center no-repeat; }
+    .bottombody {
+        width: 100%;
+        height: 240px;
+        background: #f6f6f6;
+        margin-top: 25px;
+    }
 
-.bottombody .bottom_main1 .a5{background:url(images/bottbj5.jpg) top center no-repeat;}
-.bottombody .bottom_main1 .a5:hover{background:url(images/bottbj5_hover.jpg) top center no-repeat; }
+    .bottombody .bottom_main1 {
+        width: 1200px;
+        height: 82px;
+        border-bottom: 1px solid #e6e6e6;
+        margin: 0px auto;
+        text-align: center;
+        padding-top: 37px;
+    }
 
-.bottombody .bottom_main1 .a6{background:url(images/bottbj6.jpg) top center no-repeat;}
-.bottombody .bottom_main1 .a6:hover{background:url(images/bottbj6_hover.jpg) top center no-repeat; }
+    .bottombody .bottom_main1 a {
+        padding: 0px 10px;
+        display: block;
+        float: left;
+        height: 50px;
+        padding-top: 37px;
+    }
 
-.bottombody .bottom_main1 .a7{background:url(images/bottbj7.jpg) top center no-repeat;}
-.bottombody .bottom_main1 .a7:hover{background:url(images/bottbj7_hover.jpg) top center no-repeat; }
+    .bottombody .bottom_main1 .a1 {
+        background: url(images/bottbj1.jpg) top center no-repeat;
+        margin-left: 285px;
+    }
 
-.bottom_main2{width:1200px; margin:0px auto;}
-.bottom_main2 .links{ text-align:center;font-size:12px;padding:20px 0px;}
-.bottom_main2 .links a{margin:0px 10px;} 
-.bottom_main2 .copyright{ text-align:center;font-size:12px;}
+    .bottombody .bottom_main1 .a1:hover {
+        background: url(images/bottbj1_hover.jpg) top center no-repeat;
+        margin-left: 285px;
+    }
+
+    .bottombody .bottom_main1 .a2 {
+        background: url(images/bottbj2.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a2:hover {
+        background: url(images/bottbj2_hover.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a3 {
+        background: url(images/bottbj3.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a3:hover {
+        background: url(images/bottbj3_hover.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a4 {
+        background: url(images/bottbj4.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a4:hover {
+        background: url(images/bottbj4_hover.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a5 {
+        background: url(images/bottbj5.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a5:hover {
+        background: url(images/bottbj5_hover.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a6 {
+        background: url(images/bottbj6.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a6:hover {
+        background: url(images/bottbj6_hover.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a7 {
+        background: url(images/bottbj7.jpg) top center no-repeat;
+    }
+
+    .bottombody .bottom_main1 .a7:hover {
+        background: url(images/bottbj7_hover.jpg) top center no-repeat;
+    }
+
+    .bottom_main2 {
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    .bottom_main2 .links {
+        text-align: center;
+        font-size: 12px;
+        padding: 20px 0px;
+    }
+
+    .bottom_main2 .links a {
+        margin: 0px 10px;
+    }
+
+    .bottom_main2 .copyright {
+        text-align: center;
+        font-size: 12px;
+    }
 </style>
 
 <!--加载公共底部信息-->
@@ -222,21 +322,91 @@ Mu_addLoadEvent(Mu_onload);
 </html>
 
 <style type="text/css">
-body,div,ul,li,a{margin:0px ;padding:0px;;}
-img{border:none;}
-.banner{width:1200px;height:669px;margin:0px auto;background:url(images/banner.jpg) no-repeat;}
-.center{width:1200px;height:2105px;margin:0px auto;background:url(images/mainbj.jpg)  no-repeat;}
-.title1{height:118px;width:1200px; text-align:center;}
-.nav1{width:1200px;height:69px;}
-.nav1 h1{ text-align:center; display:block; float:left;background:url(images/lsbj_hover.png)  no-repeat;}
-.nav1 .h1_1{width:600px;height:69px;}
-.nav1 .h1_2{width:600px;height:69px;}
+    body, div, ul, li, a {
+        margin: 0px;
+        padding: 0px;;
+    }
 
-.nav1 h2{ text-align:center; display:block; float:left;background:url(images/hsbj_hover.png)  no-repeat;}
-.nav1 .h2_1{width:600px;height:69px;}
-.nav1 .h2_2{width:600px;height:69px;}
+    img {
+        border: none;
+    }
 
-.main_pc{width:990px;height:811px;margin:0px auto;}
-.main_pc a{ display:block; float:left;margin-right:5px;margin-top:18px;}
-.main_pc a:hover img{filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+    .banner {
+        width: 1200px;
+        height: 669px;
+        margin: 0px auto;
+        background: url(images/banner.jpg) no-repeat;
+    }
+
+    .center {
+        width: 1200px;
+        height: 2105px;
+        margin: 0px auto;
+        background: url(images/mainbj.jpg) no-repeat;
+    }
+
+    .title1 {
+        height: 118px;
+        width: 1200px;
+        text-align: center;
+    }
+
+    .nav1 {
+        width: 1200px;
+        height: 69px;
+    }
+
+    .nav1 h1 {
+        text-align: center;
+        display: block;
+        float: left;
+        background: url(images/lsbj_hover.png) no-repeat;
+    }
+
+    .nav1 .h1_1 {
+        width: 600px;
+        height: 69px;
+    }
+
+    .nav1 .h1_2 {
+        width: 600px;
+        height: 69px;
+    }
+
+    .nav1 h2 {
+        text-align: center;
+        display: block;
+        float: left;
+        background: url(images/hsbj_hover.png) no-repeat;
+    }
+
+    .nav1 .h2_1 {
+        width: 600px;
+        height: 69px;
+    }
+
+    .nav1 .h2_2 {
+        width: 600px;
+        height: 69px;
+    }
+
+    .main_pc {
+        width: 990px;
+        height: 811px;
+        margin: 0px auto;
+    }
+
+    .main_pc a {
+        display: block;
+        float: left;
+        margin-right: 5px;
+        margin-top: 18px;
+    }
+
+    .main_pc a:hover img {
+        filter: alpha(opacity=90);
+        -moz-opacity: 0.9;
+        -khtml-opacity: 0.9;
+        opacity: 0.9;
+    }
 </style>

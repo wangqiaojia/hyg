@@ -1,32 +1,32 @@
-//ajaxº¯Êý
+//ajaxï¿½ï¿½ï¿½ï¿½
 var http_request = false;
-function send_request(url)
-{
-	//³õÊ¼»¯¡¢Ö¸¶¨´¦Àíº¯Êý¡¢·¢ËÍÇëÇóµÄº¯Êý
-	http_request = false;
-	//¿ªÊ¼³õÊ¼»¯XMLHttpRequest¶ÔÏó
-	if(window.XMLHttpRequest)
-	{
-		http_request = new XMLHttpRequest(); //Mozilla ä¯ÀÀÆ÷
-		if (http_request.overrideMimeType)
-		{
-			http_request.overrideMimeType('text/xml'); //ÉèÖÃMiMEÀà±ð
-		}
-	}
-	else if (window.ActiveXObject)
-	{
-		try{http_request = new ActiveXObject("Msxml2.XMLHTTP");} //IEä¯ÀÀÆ÷
-		catch (e)
-		{
-			try {http_request = new ActiveXObject("Microsoft.XMLHTTP");}
-			catch (e) {}
-		}
-	}
-	if (!http_request)
-	{
-		window.alert("²»ÄÜ´´½¨XMLHttpRequest¶ÔÏóÊµÀý."); //Òì³££¬´´½¨¶ÔÏóÊµÀýÊ§°Ü
-		return false;
-	}
-	http_request.open("GET",url,true); // È·¶¨·¢ËÍÇëÇóµÄ·½Ê½ºÍURLÒÔ¼°ÊÇ·ñÍ¬²½Ö´ÐÐÏÂ¶Î´úÂë
-	http_request.send(null);
+
+function send_request(url) {
+    //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½
+    http_request = false;
+    //ï¿½ï¿½Ê¼ï¿½ï¿½Ê¼ï¿½ï¿½XMLHttpRequestï¿½ï¿½ï¿½ï¿½
+    if (window.XMLHttpRequest) {
+        http_request = new XMLHttpRequest(); //Mozilla ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (http_request.overrideMimeType) {
+            http_request.overrideMimeType('text/xml'); //ï¿½ï¿½ï¿½ï¿½MiMEï¿½ï¿½ï¿½
+        }
+    }
+    else if (window.ActiveXObject) {
+        try {
+            http_request = new ActiveXObject("Msxml2.XMLHTTP");
+        } //IEï¿½ï¿½ï¿½ï¿½ï¿½
+        catch (e) {
+            try {
+                http_request = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch (e) {
+            }
+        }
+    }
+    if (!http_request) {
+        window.alert("ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½XMLHttpRequestï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½."); //ï¿½ì³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ê§ï¿½ï¿½
+        return false;
+    }
+    http_request.open("GET", url, true); // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê½ï¿½ï¿½URLï¿½Ô¼ï¿½ï¿½Ç·ï¿½Í¬ï¿½ï¿½Ö´ï¿½ï¿½ï¿½Â¶Î´ï¿½ï¿½ï¿½
+    http_request.send(null);
 }

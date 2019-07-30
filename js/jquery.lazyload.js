@@ -12,34 +12,34 @@
  * Version:  1.5.0
  *
  */
-(function($) {
+(function ($) {
 
-    $.fn.lazyload = function(options) {
+    $.fn.lazyload = function (options) {
         var settings = {
-            threshold    : 0,
-            failurelimit : 0,
-            event        : "scroll",
-            effect       : "show",
-            container    : window
+            threshold: 0,
+            failurelimit: 0,
+            event: "scroll",
+            effect: "show",
+            container: window
         };
-                
-        if(options) {
+
+        if (options) {
             $.extend(settings, options);
         }
 
         /* Fire one scroll event per scroll. Not one scroll event per image. */
         var elements = this;
         if ("scroll" == settings.event) {
-            $(settings.container).bind("scroll", function(event) {
-                
+            $(settings.container).bind("scroll", function (event) {
+
                 var counter = 0;
-                elements.each(function() {
+                elements.each(function () {
                     if ($.abovethetop(this, settings) ||
                         $.leftofbegin(this, settings)) {
-                            /* Nothing. */
+                        /* Nothing. */
                     } else if (!$.belowthefold(this, settings) &&
                         !$.rightoffold(this, settings)) {
-                            $(this).trigger("appear");
+                        $(this).trigger("appear");
                     } else {
                         if (counter++ > settings.failurelimit) {
                             return false;
@@ -47,31 +47,31 @@
                     }
                 });
                 /* Remove image from array so it is not looped next time. */
-                var temp = $.grep(elements, function(element) {
+                var temp = $.grep(elements, function (element) {
                     return !element.loaded;
                 });
                 elements = $(temp);
             });
         }
-        
-        this.each(function() {
+
+        this.each(function () {
             var self = this;
-            
+
             /* Save original only if it is not defined in HTML. */
             if (undefined == $(self).attr("original")) {
-                $(self).attr("original", $(self).attr("src"));     
+                $(self).attr("original", $(self).attr("src"));
             }
 
-            if ("scroll" != settings.event || 
-                    undefined == $(self).attr("src") || 
-                    settings.placeholder == $(self).attr("src") || 
-                    ($.abovethetop(self, settings) ||
-                     $.leftofbegin(self, settings) || 
-                     $.belowthefold(self, settings) || 
-                     $.rightoffold(self, settings) )) {
-                        
+            if ("scroll" != settings.event ||
+                undefined == $(self).attr("src") ||
+                settings.placeholder == $(self).attr("src") ||
+                ($.abovethetop(self, settings) ||
+                    $.leftofbegin(self, settings) ||
+                    $.belowthefold(self, settings) ||
+                    $.rightoffold(self, settings))) {
+
                 if (settings.placeholder) {
-                    $(self).attr("src", settings.placeholder);      
+                    $(self).attr("src", settings.placeholder);
                 } else {
                     $(self).removeAttr("src");
                 }
@@ -79,12 +79,12 @@
             } else {
                 self.loaded = true;
             }
-            
+
             /* When appear is triggered load original image. */
-            $(self).one("appear", function() {
+            $(self).one("appear", function () {
                 if (!this.loaded) {
                     $("<img />")
-                        .bind("load", function() {
+                        .bind("load", function () {
                             $(self)
                                 .hide()
                                 .attr("src", $(self).attr("original"))
@@ -92,23 +92,24 @@
                             self.loaded = true;
                         })
                         .attr("src", $(self).attr("original"));
-                };
+                }
+                ;
             });
 
             /* When wanted event is triggered load original image */
             /* by triggering appear.                              */
             if ("scroll" != settings.event) {
-                $(self).bind(settings.event, function(event) {
+                $(self).bind(settings.event, function (event) {
                     if (!self.loaded) {
                         $(self).trigger("appear");
                     }
                 });
             }
         });
-        
+
         /* Force initial check if images should appear. */
         $(settings.container).trigger(settings.event);
-        
+
         return this;
 
     };
@@ -116,7 +117,7 @@
     /* Convenience methods in jQuery namespace.           */
     /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
 
-    $.belowthefold = function(element, settings) {
+    $.belowthefold = function (element, settings) {
         if (settings.container === undefined || settings.container === window) {
             var fold = $(window).height() + $(window).scrollTop();
         } else {
@@ -124,8 +125,8 @@
         }
         return fold <= $(element).offset().top - settings.threshold;
     };
-    
-    $.rightoffold = function(element, settings) {
+
+    $.rightoffold = function (element, settings) {
         if (settings.container === undefined || settings.container === window) {
             var fold = $(window).width() + $(window).scrollLeft();
         } else {
@@ -133,17 +134,17 @@
         }
         return fold <= $(element).offset().left - settings.threshold;
     };
-        
-    $.abovethetop = function(element, settings) {
+
+    $.abovethetop = function (element, settings) {
         if (settings.container === undefined || settings.container === window) {
             var fold = $(window).scrollTop();
         } else {
             var fold = $(settings.container).offset().top;
         }
-        return fold >= $(element).offset().top + settings.threshold  + $(element).height();
+        return fold >= $(element).offset().top + settings.threshold + $(element).height();
     };
-    
-    $.leftofbegin = function(element, settings) {
+
+    $.leftofbegin = function (element, settings) {
         if (settings.container === undefined || settings.container === window) {
             var fold = $(window).scrollLeft();
         } else {
@@ -155,10 +156,10 @@
     /* Use as $("img:below-the-fold").something() */
 
     $.extend($.expr[':'], {
-        "below-the-fold" : "$.belowthefold(a, {threshold : 0, container: window})",
-        "above-the-fold" : "!$.belowthefold(a, {threshold : 0, container: window})",
-        "right-of-fold"  : "$.rightoffold(a, {threshold : 0, container: window})",
-        "left-of-fold"   : "!$.rightoffold(a, {threshold : 0, container: window})"
+        "below-the-fold": "$.belowthefold(a, {threshold : 0, container: window})",
+        "above-the-fold": "!$.belowthefold(a, {threshold : 0, container: window})",
+        "right-of-fold": "$.rightoffold(a, {threshold : 0, container: window})",
+        "left-of-fold": "!$.rightoffold(a, {threshold : 0, container: window})"
     });
-    
+
 })(jQuery);
